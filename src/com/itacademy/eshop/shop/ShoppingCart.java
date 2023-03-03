@@ -1,12 +1,13 @@
 package com.itacademy.eshop.shop;
 
 import com.itacademy.eshop.product.Product;
+import java.util.ArrayList;
 
 public class ShoppingCart {
-    Product[] products;
+    ArrayList<Product> products;
 
     public ShoppingCart() {
-        this.products = new Product[]{};
+        this.products = new ArrayList<>();
     }
 
     public void printShoppingCart() {
@@ -18,10 +19,36 @@ public class ShoppingCart {
         System.out.println("Total price: " + getTotalPrice());
     }
 
-    public String getTotalPrice() {
+    public Integer getTotalPrice() {
         /**
          * Cakculates total price of shopping cart
          */
-        throw new UnsupportedOperationException("getTotalPrice() is not implemented yet");
+        int totalPrice = 0;
+        for (Product product : products) {
+            totalPrice += product.getPrice();
+        }
+        return totalPrice;
+    }
+
+    public void addProduct(Product product) {
+        products.add(product);
+    }
+
+    public void removeProductByName(String shirt) {
+        for (Product product : products) {
+            if (product.getName().equals(shirt)) {
+                products.remove(product);
+                break;
+            }
+        }
+    }
+
+    public Product getProductByName(String book) {
+        for (Product product : products) {
+            if (product.getName().equals(book)) {
+                return product;
+            }
+        }
+        return null;
     }
 }
