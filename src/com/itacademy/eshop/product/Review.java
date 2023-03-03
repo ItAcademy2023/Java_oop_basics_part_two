@@ -1,4 +1,4 @@
-package com.itacademy.product;
+package com.itacademy.eshop.product;
 
 public class Review {
     private String author;
@@ -11,4 +11,15 @@ public class Review {
         this.comment = comment;
     }
 
+    public String getAuthor() {
+        return author;
+    }
+
+    public int getRating() {
+        return rating;
+    }
+
+    public String getComment() {
+        return comment;
+    }
 }
