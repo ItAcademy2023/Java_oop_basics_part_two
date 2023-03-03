@@ -40,4 +40,7 @@ public class Product {
         return null;
     }
 
+    public void setPrice(int price) {
+        this.price = price;
+    }
 }
