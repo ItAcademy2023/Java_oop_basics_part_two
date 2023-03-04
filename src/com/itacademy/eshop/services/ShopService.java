@@ -21,19 +21,11 @@ public class ShopService {
     private ArrayList<Product> createProducts() {
         /**
          * Should return a list of products. Should contain at least 6 products,
-         * one per each category in Category enum.
-         * Product should not have any reviews.
+         * Each product must be different class. For example: Computer, Shirt etc.
+         * Each class must extend AbstractProduct class.
+         * So you will have to create at least 6 classes that extend Product class.
          */
-        return new ArrayList<>() {
-            {
-                add(new Product("product one", 10, Category.BOOKS));
-                add(new Product("product two", 20, Category.CLOTHING));
-                add(new Product("product three", 30, Category.ELECTRONICS));
-                add(new Product("product four", 40, Category.FOOD));
-                add(new Product("product five", 50, Category.TOYS));
-                add(new Product("product six", 60, Category.FOOD));
-            }
-        };
+        throw new UnsupportedOperationException("createProducts() method is not implemented yet.");
     }
 
 }

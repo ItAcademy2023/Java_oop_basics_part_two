@@ -1,5 +1,6 @@
 package com.itacademy.eshop.simulations;
 
+import com.itacademy.eshop.exceptions.ProductNotFoundException;
 import com.itacademy.eshop.product.Review;
 import com.itacademy.eshop.shop.Eshop;
 import com.itacademy.eshop.shop.ShoppingCart;
@@ -18,18 +19,19 @@ public class CustomerSimulation {
         shoppingCart = new ShoppingCart();
     }
 
-    public ShoppingCart simulateCustomerShopping() {
+    public ShoppingCart simulateCustomerShopping() throws ProductNotFoundException {
         addProductsToShoppingCart();
         removeProductsFromShoppingCart();
         leaveReviewsAndRatingsForProducts();
         return shoppingCart;
     }
 
-    private void addProductsToShoppingCart() {
+    private void addProductsToShoppingCart() throws ProductNotFoundException {
         /**
          * User browses the shop and adds 4 products to the shopping cart.
          * One of them should be a book and other should be a shirt.
          */
+
         shoppingCart.addProduct(shop.findProductByName("Shirt"));
         shoppingCart.addProduct(shop.findProductByName("Book"));
         shoppingCart.addProduct(shop.findProductByName("product one"));
@@ -43,13 +45,17 @@ public class CustomerSimulation {
         shoppingCart.removeProductByName("Shirt");
     }
 
-private void leaveReviewsAndRatingsForProducts() {
+    private void leaveReviewsAndRatingsForProducts() {
         /**
          * User leaves review for each product in the shopping cart.
          */
         Review review = new Review("John Doe", 5, "This is a review for the shirt");
 
-        shoppingCart.getProductByName("Book").addReview(review);
+        try {
+            shoppingCart.getProductByName("Book").addReview(review);
+        } catch (ProductNotFoundException e) {
+            System.out.println("Review was not left, " + e.getMessage());
+        }
 
     }
 

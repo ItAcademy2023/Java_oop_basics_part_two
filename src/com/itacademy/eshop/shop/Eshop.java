@@ -1,7 +1,7 @@
 package com.itacademy.eshop.shop;
 
+import com.itacademy.eshop.exceptions.ProductNotFoundException;
 import com.itacademy.eshop.product.Product;
-import com.itacademy.eshop.product.Review;
 import com.itacademy.eshop.product.types.Category;
 
 import java.util.ArrayList;
@@ -16,18 +16,12 @@ public class Eshop {
     }
 
     public void printProducts() {
+        /**
+         * Prints all products in the shop. You have to implement displayProductInfo() method in each Product class.
+         * Make Product class abstract and implement displayProductInfo() method in each child class.
+         */
         for (Product product : products) {
-            System.out.println("Product name: " + product.getName());
-            System.out.println("Price: " + product.getPrice());
-            System.out.println("Category: " + product.getCategory());
-            System.out.println("Reviews:");
-            for (Review review : product.getReviews()) {
-                System.out.println("Author: " + review.getAuthor());
-                System.out.println("Rating: " + review.getRating());
-                System.out.println("Comment: " + review.getComment());
-            }
-            System.out.println("Average rating: " + product.getAverageRating());
-            System.out.println("-----------------------------");
+//            product.displayProductInfo();
         }
     }
 
@@ -35,16 +29,30 @@ public class Eshop {
         products.add(shirt);
     }
 
-    public void removeProductByName(String laptop) {
+
+    /** This is an example of method overloading
+     * We have created two methods with the same name "removeProduct", but with different parameters
+     * One method takes a String parameter and the other method takes a Category parameter
+     * This allows us to remove a product either by name or by category, using the same method name
+     * */
+    public void removeProduct(String name) {
         for (int i = 0; i < products.size(); i++) {
             Product product = products.get(i);
-            if (product.getName().equals(laptop)) {
+            if (product.getName().equals(name)) {
                 products.remove(product);
                 break;
             }
         }
     }
-
+    public void removeProduct(Category category) {
+        for (int i = 0; i < products.size(); i++) {
+            Product product = products.get(i);
+            if (product.getCategory().equals(category)) {
+                products.remove(i);
+                break;
+            }
+        }
+    }
 
     public void changePriceForProduct(String productName, int price) {
         for (Product product : products) {
@@ -55,22 +63,13 @@ public class Eshop {
         }
     }
 
-    public void removeProductByCategory(Category category) {
-        for (int i = 0; i < products.size(); i++) {
-            Product product = products.get(i);
-            if (product.getCategory().equals(category)) {
-                products.remove(i);
-                break;
-            }
-        }
-    }
-
-    public Product findProductByName(String shirt) {
+    public Product findProductByName(String name) throws ProductNotFoundException {
         for (Product product : products) {
-            if (product.getName().equals(shirt)) {
+            if (product.getName().equals(name)) {
                 return product;
             }
         }
-        return null;
+        throw new ProductNotFoundException("Product with name " + name + " not found.");
+
     }
 }
