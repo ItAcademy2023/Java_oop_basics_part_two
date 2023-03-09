@@ -22,9 +22,16 @@ public class Review extends Exception{
     public String getComment() {
         return comment;
     }
-    public ProductNotFoundException(String message) {
-        super(message);
+/**Encapsulation
+variables accessable outside of that class
+ The set method takes a parameter (newAuthor) and assigns it to the name variable.
+ The this keyword is used to refer to the current object.*/
+    public void setAuthor(String newAuthor) {
+        this.author = newAuthor;
     }
 
+    public void setComment(String newComment) {
+        this.comment = newComment;
+    }
 
 }

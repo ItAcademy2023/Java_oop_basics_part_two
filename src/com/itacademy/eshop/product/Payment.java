@@ -17,7 +17,9 @@ public abstract class Payment {
     public double getTaxes() {
         return taxes;
     }
-
+/**
+ * Create an abstract class called payment with abstract method processPayment().
+ * Add some fields and methods to it.*/
     public abstract double processPayment(double d1,
                                           double d2,
                                           double d3);
