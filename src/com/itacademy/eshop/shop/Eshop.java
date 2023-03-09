@@ -30,11 +30,12 @@ public class Eshop {
     }
 
 
-    /** This is an example of method overloading
+    /**
+     * This is an example of method overloading
      * We have created two methods with the same name "removeProduct", but with different parameters
      * One method takes a String parameter and the other method takes a Category parameter
      * This allows us to remove a product either by name or by category, using the same method name
-     * */
+     */
     public void removeProduct(String name) {
         for (int i = 0; i < products.size(); i++) {
             Product product = products.get(i);

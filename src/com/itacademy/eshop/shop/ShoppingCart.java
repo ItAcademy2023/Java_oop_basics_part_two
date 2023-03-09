@@ -2,6 +2,7 @@ package com.itacademy.eshop.shop;
 
 import com.itacademy.eshop.exceptions.ProductNotFoundException;
 import com.itacademy.eshop.product.Product;
+
 import java.util.ArrayList;
 
 public class ShoppingCart {

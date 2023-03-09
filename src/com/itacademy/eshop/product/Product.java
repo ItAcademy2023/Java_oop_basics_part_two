@@ -51,9 +51,13 @@ public abstract class Product {
         reviews.add(review);
     }
 
-    public void setPrice(int price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
+    public abstract void setDiscountedPrice();
+
     public abstract void displayProductInfo();
+
+
 }
