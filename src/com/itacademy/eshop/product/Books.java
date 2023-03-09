@@ -18,8 +18,8 @@ public class Books extends Product{
     @Override
     public void displayProductInfo() {
         System.out.println(
-                " author: " + author + "Product name: " + getName() +   " genre: " + genre + " price: " + getPrice() + " product category: " + getCategory()
-                         + " pages: " +pages
+                "Author: " + author + ";  Product name: " + getName() +   ";  genre: " + genre + ";  price: " + getPrice() + ";  product category: " + getCategory()
+                         + ";  pages: " + pages
         );
     }
 

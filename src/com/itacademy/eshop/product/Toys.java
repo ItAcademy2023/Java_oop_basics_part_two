@@ -17,8 +17,8 @@ public class Toys extends Product implements Warnings {
     @Override
     public void displayProductInfo() {
         System.out.println(
-                "Product name: " + getName() + " price: " + getPrice() + " product category: " + getCategory()
-                        + " contains small particles " + smallParticles + " educational: " + educational
+                "Product name: " + getName() + ";  price: " + getPrice() + ";  product category: " + getCategory()
+                        + ";  contains small particles " + smallParticles + ";  educational: " + educational
         );
     }
 

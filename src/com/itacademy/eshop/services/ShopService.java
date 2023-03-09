@@ -25,13 +25,22 @@ public class ShopService {
          * Each class must extend AbstractProduct class.
          * So you will have to create at least 6 classes that extend Product class.
          */
+        ArrayList<Product> list = new ArrayList<Product>();
         Computer computer = new Computer("name", 500, Category.ELECTRONICS, "125", "Dell",
                 "inter", 1);
-        Clothing clothing = new Clothing("shirt", 15.90, Category.CLOTHING, "some", "s", "cooton");
+        Clothing shirt = new Clothing("shirt", 15.90, Category.CLOTHING, "some", "s", "cooton");
         Food food = new Food("cucumbers", 8.99, Category.FOOD, true, true);
         Books books = new Books("death in village", 23.00, Category.BOOKS, "Peter Thomas", "detective", 345);
         Smartphone smartphone = new Smartphone("max pro", 600.90, Category.ELECTRONICS, "100", "apple");
-        throw new UnsupportedOperationException("createProducts() method is not implemented yet.");
+        Toys toys = new Toys("lego", 25.90, Category.TOYS, true, true);
+//        throw new UnsupportedOperationException("createProducts() method is not implemented yet.");
+       list.add(computer);
+       list.add(shirt);
+       list.add(food);
+       list.add(books);
+       list.add(smartphone);
+       list.add(toys);
+        return list;
     }
 
 }

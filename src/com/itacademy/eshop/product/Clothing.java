@@ -20,8 +20,8 @@ public class Clothing extends Product implements Warnings {
     @Override
     public void displayProductInfo() {
         System.out.println(
-                "Product name: " + getName() + " price: " + getPrice() + " product category: " + getCategory()
-                + " brand " + brand + " size: " +size
+                "Product name: " + getName() + ";  price: " + getPrice() + ";  product category: " + getCategory()
+                + ";  brand " + brand + ";  size: " +size
         );
     }
 

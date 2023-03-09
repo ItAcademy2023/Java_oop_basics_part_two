@@ -10,8 +10,8 @@ public class Smartphone extends Electronics{
     @Override
     public void displayProductInfo() {
         System.out.println(
-               "Product name: " + getName() + " price: " + getPrice() + " Category: " + getCategory() +
-                       " voltage: " + getVoltage() + " brand: " + getBrand()
+               "Product name: " + getName() + ";  price: " + getPrice() + ";  Category: " + getCategory() +
+                       ";  voltage: " + getVoltage() + ";  brand: " + getBrand()
         );
     }
 
