@@ -41,12 +41,7 @@ public class Cards extends Toys {
 
     @Override
     public void showOnlyImportant() {
-        System.out.println(
-                "Name: " + getName() +
-                        "Price: " + getPrice()
-
-
-        );
+        System.out.println("Name: " + getName() + "Price: " + getPrice());
     }
 
 }

@@ -3,8 +3,8 @@ package com.itacademy.eshop.product;
 import com.itacademy.eshop.services.Payment;
 
 public class NormalUser extends Payment {
-    public NormalUser(String userName, double id, boolean canMakePayment){
-        super(userName,id,canMakePayment);
+    public NormalUser(String userName, double id, boolean canMakePayment) {
+        super(userName, id, canMakePayment);
     }
 
     @Override
@@ -14,9 +14,9 @@ public class NormalUser extends Payment {
 
     @Override
     public void processPayment() {
-        if(getCanMakePayment()){
+        if (getCanMakePayment()) {
             System.out.println("Payment was processed");
-        }else{
+        } else {
             System.out.println("Payment did not process");
         }
     }

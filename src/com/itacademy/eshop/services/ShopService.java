@@ -36,7 +36,7 @@ public class ShopService {
          * So you will have to create at least 6 classes that extend Product class.
          */
 
-        ArrayList<Product> products = new ArrayList<Product>();
+        ArrayList<Product> products = new ArrayList<>();
         products.add(new Computer("myPc", 500, Category.ELECTRONICS, 110, "brandNew", "intel", 16));
         products.add(new Smartphone("iPhone", 800, Category.ELECTRONICS, 110, "Apple", 'M', "iOS"));
         products.add(new Cards("Bicycle", 5, Category.TOYS, "paper", 5, 52, false));

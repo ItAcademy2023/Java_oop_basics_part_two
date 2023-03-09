@@ -16,9 +16,10 @@ public abstract class Electronics extends Product {
     public int getVoltage() {
         return voltage;
     }
+
     //method overloading
     public String getVoltage(boolean check) {
-        if(check){
+        if (check) {
             return "In europe 220";
         }
         return "110";

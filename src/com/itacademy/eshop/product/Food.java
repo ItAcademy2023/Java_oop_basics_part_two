@@ -11,9 +11,11 @@ public abstract class Food extends Product {
         this.taste = taste;
         this.weight = weight;
     }
+
     public String getTaste() {
         return taste;
     }
+
     public int getWeight() {
         return weight;
     }

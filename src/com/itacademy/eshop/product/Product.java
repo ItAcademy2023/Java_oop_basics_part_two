@@ -58,15 +58,17 @@ public abstract class Product implements Electrify {
     }
 
     public abstract void displayProductInfo();
-//Create a new abstract method in the Product class that will be overridden in the subclasses
+
+    //Create a new abstract method in the Product class that will be overridden in the subclasses
     public abstract void showOnlyImportant();
-//Implement interface
-    public void checkIfItCanShockYou(){
-    if(category==Category.ELECTRONICS){
-        System.out.println("This item can shock you");
-    }else{
-        System.out.println("This item wont shock you");
-    }
+
+    //Implement interface
+    public void checkIfItCanShockYou() {
+        if (category == Category.ELECTRONICS) {
+            System.out.println("This item can shock you");
+        } else {
+            System.out.println("This item wont shock you");
+        }
     }
 
 }

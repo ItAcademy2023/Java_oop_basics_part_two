@@ -24,14 +24,14 @@ public class Review {
     }
 
     public void setAuthor(String author) {
-        this.author=author;
+        this.author = author;
     }
 
     public void setRating(int rating) {
-        this.rating=rating;
+        this.rating = rating;
     }
 
     public void setComment(String comment) {
-        this.comment=comment;
+        this.comment = comment;
     }
 }

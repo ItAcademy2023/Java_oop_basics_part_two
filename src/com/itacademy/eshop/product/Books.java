@@ -13,12 +13,15 @@ public abstract class Books extends Product {
         this.releaseYear = releaseYear;
         this.pageCount = pageCount;
     }
+
     public String getAuthor() {
         return author;
     }
+
     public int getReleaseYear() {
         return releaseYear;
     }
+
     public int getPageCount() {
         return pageCount;
     }

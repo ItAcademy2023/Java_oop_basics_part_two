@@ -1,7 +1,12 @@
 package com.itacademy.eshop.simulations;
 
+import com.itacademy.eshop.exceptions.DuplicateProductException;
 import com.itacademy.eshop.product.Computer;
+import com.itacademy.eshop.product.Novel;
+import com.itacademy.eshop.product.Shirt;
 import com.itacademy.eshop.product.types.Category;
+import com.itacademy.eshop.product.types.NovelTypes;
+import com.itacademy.eshop.product.types.Seasons;
 import com.itacademy.eshop.shop.Eshop;
 
 /**
@@ -16,20 +21,22 @@ public class ManagerSimulation {
         this.shop = shop;
     }
 
-    public void simulate() {
+    public void simulate() throws DuplicateProductException {
         addThreeNewProducts();
         findAndRemoveOneProduct();
         changePriceForOneProduct();
         removeAllProductsWithCategory(Category.FOOD);
     }
 
-    private void addThreeNewProducts() {
+    private void addThreeNewProducts() throws DuplicateProductException {
         /**
          * adds three new products to the shop. One of them should be a book, one should be a Laptop, and one should be a shirt.
          * All must be different types of products.
          */
-        Computer computer = new Computer("Laptop", 1000, Category.ELECTRONICS, "12", "apple", "intel", 16);
+        Computer computer = new Computer("Laptop", 1000, Category.ELECTRONICS, 110, "apple", "intel", 16);
         shop.addProduct(computer);
+        shop.addProduct(new Shirt("Shirt", 20, Category.CLOTHING, "short sleeve", 18, Seasons.AUTUMN, 'S'));
+        shop.addProduct(new Novel("Book", 40, Category.BOOKS, "Famous author", 2020, 900, NovelTypes.ROMANTIC));
     }
 
     private void findAndRemoveOneProduct() {

@@ -19,9 +19,11 @@ public abstract class Clothing extends Product {
     public int getSeason() {
         return forAge;
     }
+
     public Seasons getForAge() {
         return seasons;
     }
+
     public String getType() {
         return type;
     }

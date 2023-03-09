@@ -20,6 +20,7 @@ public abstract class Payment {
     public double getId() {
         return id;
     }
+
     public boolean getCanMakePayment() {
         return canMakePayment;
     }
