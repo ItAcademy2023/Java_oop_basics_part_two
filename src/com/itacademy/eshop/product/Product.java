@@ -46,6 +46,7 @@ public abstract class Product {
         return sum / reviews.size();
     }
 
+
     public void addReview(Review review) {
         reviews.add(review);
     }

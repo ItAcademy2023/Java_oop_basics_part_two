@@ -1,5 +1,6 @@
 package com.itacademy.eshop;
 
+import com.itacademy.eshop.exceptions.DuplicateProductException;
 import com.itacademy.eshop.exceptions.ProductNotFoundException;
 import com.itacademy.eshop.services.ShopService;
 import com.itacademy.eshop.shop.Eshop;
@@ -53,6 +54,13 @@ public class Runner {
          */
         shoppingCart.printShoppingCart();
 
+
+        try {
+            shop.duplicateProduct("");
+        } catch (DuplicateProductException e) {
+            System.out.println("" + e.getMessage());
+
+        }
 
     }
 }

@@ -1,5 +1,6 @@
 package com.itacademy.eshop.shop;
 
+import com.itacademy.eshop.exceptions.DuplicateProductException;
 import com.itacademy.eshop.exceptions.ProductNotFoundException;
 import com.itacademy.eshop.product.Product;
 import com.itacademy.eshop.product.types.Category;
@@ -72,4 +73,14 @@ public class Eshop {
         throw new ProductNotFoundException("Product with name " + name + " not found.");
 
     }
-}
+
+    public void duplicateProduct(String name ) throws DuplicateProductException {
+        for (Product product: products){
+            if (product.getName().equals(name)){
+                throw new DuplicateProductException("Product with name " + name + " is dublicate");
+
+        }
+    }
+        }
+    }
+

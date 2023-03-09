@@ -23,6 +23,10 @@ public class Computer extends Electronics implements Discountable {
         return ram;
     }
 
+    public String getCpuAndRam() {
+        return processor + ram;
+    }
+
     /** This annotation indicates that the getPrice() method is being overridden from the parent class.*/
     @Override
     public double getPrice() {
