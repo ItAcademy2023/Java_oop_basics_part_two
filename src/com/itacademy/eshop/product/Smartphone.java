@@ -23,4 +23,8 @@ public class Smartphone extends Electronics {
                 CPU name: %s
                 """, getName(), getBrand(), getPrice(), this.memoryram, this.cpuName);
     }
+    @Override
+    public void abstractOverridenMethod() {
+        throw new UnsupportedOperationException("abstractOverriddenMethod() method is not implemented yet.");
+    }
 }

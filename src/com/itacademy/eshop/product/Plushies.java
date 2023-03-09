@@ -14,7 +14,10 @@ public class Plushies extends Toys{
                 "Price: %.2f\n" +
                 "Stuffing type: %s", getName(), getPrice(), getStuffingType());
     }
-
+    @Override
+    public void abstractOverridenMethod() {
+        throw new UnsupportedOperationException("abstractOverriddenMethod() method is not implemented yet.");
+    }
     public String getStuffingType() {
         return stuffingType;
     }

@@ -16,4 +16,8 @@ public class Book extends Books{
                 "Book genre: %s\n" +
                 "Book page count: %d\n", getName(), getGenre(), getPageCount());
     }
+    @Override
+    public void abstractOverridenMethod() {
+        throw new UnsupportedOperationException("abstractOverriddenMethod() method is not implemented yet.");
+    }
 }

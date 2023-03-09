@@ -16,4 +16,8 @@ public class Fruit extends Food{
                 Fruit type: %s
                 Gross Weight: %.2f""", getName(), getPrice(), this.fruitType, getGrossWeight());
     }
+    @Override
+    public void abstractOverridenMethod() {
+        throw new UnsupportedOperationException("abstractOverriddenMethod() method is not implemented yet.");
+    }
 }
