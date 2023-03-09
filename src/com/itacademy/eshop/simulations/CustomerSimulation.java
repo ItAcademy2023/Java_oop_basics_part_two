@@ -8,7 +8,7 @@ import com.itacademy.eshop.shop.ShoppingCart;
 /**
  * This class represents a simulation of a customer shopping on an Eshop.
  * The customer can add and remove products from their shopping cart,
- * as well as leave reviews and ratings for the products.
+ * as well as leave reviews and ratings for the products.call
  */
 public class CustomerSimulation {
     private Eshop shop;

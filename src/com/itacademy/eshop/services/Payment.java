@@ -1,15 +1,14 @@
-package com.itacademy.eshop.product;
+package com.itacademy.eshop.services;
 
 public abstract class Payment {
-    String paymentType;
     double paymentAmount;
+    boolean paymentConfirmed = false;
 
     public abstract void makePayment();
 
     public abstract void processPayment();
 
-    public Payment(String paymentType, double paymentAmount) {
-        this.paymentType = paymentType;
+    public Payment(double paymentAmount) {
         this.paymentAmount = paymentAmount;
     }
 }
