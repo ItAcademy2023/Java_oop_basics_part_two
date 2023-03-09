@@ -2,6 +2,7 @@ package com.itacademy.eshop.shop;
 
 import com.itacademy.eshop.exceptions.ProductNotFoundException;
 import com.itacademy.eshop.product.Product;
+import com.itacademy.eshop.product.Review;
 import com.itacademy.eshop.product.types.Category;
 
 import java.util.ArrayList;
@@ -14,7 +15,14 @@ public class Eshop {
         this.name = name;
         this.products = products;
     }
-
+//public method that accesses private field
+public double getAveragePrice() {
+    double sum = 0;
+    for (Product product : products) {
+        sum += product.getPrice();
+    }
+    return sum / products.size();
+}
     public void printProducts() {
         /**
          * Prints all products in the shop. You have to implement displayProductInfo() method in each Product class.
