@@ -28,4 +28,9 @@ public class Clothing extends Product{
         System.out.println("Taste: " + getColour());
         System.out.println("Rating: " + getSize());
     }
+
+    @Override
+    public void displaySettings() {
+
+    }
 }

@@ -28,7 +28,13 @@ public class Food extends Product{
         System.out.println("Name: " + getName());
         System.out.println("Price: " + getPrice());
         System.out.println("Category: "+ getCategory());
-        System.out.println("Category: "+ getRating());
+        System.out.println("Taste: "+ getTaste());
         System.out.println("Rating: " + getRating());
     }
+
+    @Override
+    public void displaySettings() {
+
+    }
+
 }

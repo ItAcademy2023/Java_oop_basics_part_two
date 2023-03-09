@@ -55,7 +55,9 @@ public abstract class Product {
         this.price = price;
     }
 
+
     public abstract void displayProductInfo();
 
+    public abstract void displaySettings();
 }
 

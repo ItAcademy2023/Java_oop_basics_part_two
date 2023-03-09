@@ -6,6 +6,7 @@ public class Toys extends Product {
 
     private int agelimit;
     private int weight;
+
     public Toys(String name, double price, Category category, int agelimit, int weight) {
         super(name, price, category);
         this.agelimit = agelimit;
@@ -24,8 +25,18 @@ public class Toys extends Product {
     public void displayProductInfo() {
         System.out.println("Name: " + getName());
         System.out.println("Price: " + getPrice());
-        System.out.println("Category: "+ getCategory());
+        System.out.println("Category: " + getCategory());
         System.out.println("Age Limit: " + getAgelimit());
         System.out.println("Weight: " + getWeight());
     }
+
+    @Override
+    public void displaySettings() {
+
+    }
+
+    public void sowAgeWarning() {
+        System.out.println("If a child is younger than 3 years old, this toy is not suitable for them.");
+    }
 }
+

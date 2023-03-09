@@ -28,4 +28,9 @@ public class Smartphone extends Electronics{
         System.out.println("Category: "+ getCamerapixels());
         System.out.println("Rating: " + getPhoneweight());
     }
+
+    @Override
+    public void displaySettings() {
+
+    }
 }
