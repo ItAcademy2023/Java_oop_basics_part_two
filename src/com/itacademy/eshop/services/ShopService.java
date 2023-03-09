@@ -1,5 +1,6 @@
 package com.itacademy.eshop.services;
 
+import com.itacademy.eshop.product.Books;
 import com.itacademy.eshop.product.Product;
 import com.itacademy.eshop.product.types.Category;
 import com.itacademy.eshop.shop.Eshop;
@@ -25,7 +26,7 @@ public class ShopService {
          * Each class must extend AbstractProduct class.
          * So you will have to create at least 6 classes that extend Product class.
          */
-        throw new UnsupportedOperationException("createProducts() method is not implemented yet.");
+        throw new UnsupportedOperationException("createProducts() is not implemented yet");
     }
 
 }

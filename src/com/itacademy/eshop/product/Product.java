@@ -46,6 +46,17 @@ public abstract class Product {
         return sum / reviews.size();
     }
 
+    public int numberOfPerfectRatings() {
+        int num = 0;
+        for (Review review : reviews) {
+            if (review.getRating() == 10)
+            {
+                num++;
+            }
+        }
+        return num;
+    }
+
     public void addReview(Review review) {
         reviews.add(review);
     }
@@ -56,6 +67,8 @@ public abstract class Product {
     }
 
     public abstract void displayProductInfo();
+
+    public abstract void displayProductColor();
 
 
 }
