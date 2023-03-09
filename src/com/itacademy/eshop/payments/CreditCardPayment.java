@@ -1,4 +1,4 @@
-package com.itacademy.eshop.services;
+package com.itacademy.eshop.payments;
 
 public class CreditCardPayment extends Payment {
 

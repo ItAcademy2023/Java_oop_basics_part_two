@@ -1,4 +1,4 @@
-package com.itacademy.eshop.services;
+package com.itacademy.eshop.payments;
 
 public class MobilePayment extends Payment {
     private String phoneNumber;
