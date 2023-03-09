@@ -7,8 +7,8 @@ public class Food extends Product {
     private final String FoodSize;
     private final int weight;
 
-    public Food (String name, double price, Category category, String FoodName, String FoodSize, int weight){
-        super(name, price, category);
+    public Food (String name, double price, Category category, int ProductIdentifier, String FoodName, String FoodSize, int weight){
+        super(name, price, category, ProductIdentifier);
         this.FoodName = FoodName;
         this.FoodSize = FoodSize;
         this.weight = weight;
@@ -35,6 +35,8 @@ public class Food extends Product {
         System.out.println(getName());
         System.out.println(getPrice());
         System.out.println(getCategory());
+        System.out.println(getProductIdentifier());
+
         //getter methods of the child class
         System.out.println(this.FoodName);
         System.out.println(this.FoodSize);

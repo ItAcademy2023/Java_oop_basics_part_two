@@ -10,11 +10,17 @@ public abstract class Product {
     private Category category;
     private ArrayList<Review> reviews;
 
-    public Product(String name, double price, Category category) {
+    //new abstract method declaration
+    private int ProductIdentifier;
+
+    public Product(String name, double price, Category category, int ProductIdentifier) {
         this.name = name;
         this.price = price;
         this.category = category;
         this.reviews = new ArrayList<>();
+
+        //new constructor to the method
+        this.ProductIdentifier = ProductIdentifier;
     }
 
     public String getName() {
@@ -30,6 +36,11 @@ public abstract class Product {
 
     public ArrayList<Review> getReviews() {
         return reviews;
+    }
+
+    //getter for the Product Identifier method
+    public int getProductIdentifier(){
+        return ProductIdentifier;
     }
 
     /**
@@ -54,6 +65,8 @@ public abstract class Product {
     public void setPrice(int price) {
         this.price = price;
     }
+
+    //setter for product Identifier
 
     public abstract void displayProductInfo();
 

@@ -7,8 +7,8 @@ public class Clothing extends Product {
     private final String color;
     private final String size;
 
-    public Clothing (String name, double price, Category category, String color, String size){
-        super(name, price , category);
+    public Clothing (String name, double price, Category category, int ProductIdentifier,String color, String size){
+        super(name, price , category, ProductIdentifier);
         this.color = color;
         this.size = size;
     }
@@ -27,6 +27,8 @@ public class Clothing extends Product {
         System.out.println(getName());
         System.out.println(getPrice());
         System.out.println(getCategory());
+
+        System.out.println(getProductIdentifier());
 
         //printing the getter methods of the child class
         System.out.println(this.color);
