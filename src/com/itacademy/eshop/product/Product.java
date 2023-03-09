@@ -78,4 +78,6 @@ public abstract class Product {
 
 
     public abstract void printOutTotalPrice();
+    public abstract void setDiscountedPrice();
+
 }

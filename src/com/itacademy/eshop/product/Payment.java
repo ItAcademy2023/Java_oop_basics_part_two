@@ -1,34 +1,18 @@
 package com.itacademy.eshop.product;
 
-import com.itacademy.eshop.product.types.Category;
+import java.util.UUID;
 
-//display more specific
 public abstract class Payment {
 
-    private double taxes;
-    private String method;
+    private final String paymentID;
 
-    public Payment( double taxes, String method) {
-
-        this.taxes = taxes;
-        this.method = method;
+    public Payment() {
+        this.paymentID = UUID.randomUUID().toString();
     }
 
-    public double getTaxes() {
-        return taxes;
+    // getter method for paymentID
+    public String getPaymentID() {
+        return paymentID;
     }
-/**
- * Create an abstract class called payment with abstract method processPayment().
- * Add some fields and methods to it.*/
-    public abstract double processPayment(double d1,
-                                          double d2,
-                                          double d3);
-
-    public String getMethod() {
-        return method;
-    }
-
-    public abstract void displayProductInfo();
-
-    public abstract void printOutTotalPrice();
+    abstract void processPayment();
 }

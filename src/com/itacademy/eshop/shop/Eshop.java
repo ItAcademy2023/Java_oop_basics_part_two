@@ -1,10 +1,9 @@
 package com.itacademy.eshop.shop;
 
+import com.itacademy.eshop.exceptions.DuplicateProductException;
 import com.itacademy.eshop.exceptions.ProductNotFoundException;
 import com.itacademy.eshop.product.Product;
-import com.itacademy.eshop.product.Review;
 import com.itacademy.eshop.product.types.Category;
-import com.itacademy.eshop.exceptions.DuplicateProductException;
 
 import java.util.ArrayList;
 
@@ -24,25 +23,27 @@ public class Eshop {
          */
         for (Product product : products) {
 //            product.displayProductInfo();
-            //  System.out.println("*******************************************");
         }
     }
-
-    /**
-     * Modify the addProduct() method in the Eshop class to throw a DuplicateProductException
-     * if the product being added already exists in the product list.
-     */
-    public void addProduct(Product shirt) throws DuplicateProductException {
-        for (Product product : products) {
-            if (product.getName().equals(shirt)) {
-                throw new DuplicateProductException("Product " + shirt + " being added already exists in the product list");
+/**
+ * Modify the addProduct() method in the Eshop class to throw a
+ * DuplicateProductException if the product being added already exists in the product list.
+ *  cycles all eshop products and compares if that passed Product  already exists in the shop
+ *  if not - add it at the end of the loop
+ * if it does exists - throw the execption
+ *  */
+    public void addProduct(Product product) throws DuplicateProductException {
+        for(Product p : products){
+            if(p.equals(product)){
+                throw new DuplicateProductException("Product already exists");
+            }else{
+                products.add(product);
             }
+
         }
-        products.add(shirt);
+
 
     }
-
-
 
 
     /**
@@ -87,6 +88,5 @@ public class Eshop {
             }
         }
         throw new ProductNotFoundException("Product with name " + name + " not found.");
-
     }
 }

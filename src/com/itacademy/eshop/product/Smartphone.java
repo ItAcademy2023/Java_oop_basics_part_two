@@ -44,9 +44,9 @@ public class Smartphone extends Electronics implements Discountable {
  *   print all the fiellds
  * main abstract which is on the product class*/
         System.out.println(
-                "Category" + getCategory() +
-                        "Voltage" + getVoltage() +
-                        "Price" + getPrice());
+                "\nCategory" + getCategory() +
+                        "\nVoltage" + getVoltage() +
+                        "\nPrice" + getPrice());
 
         throw new UnsupportedOperationException("displayProductInfo() method is not implemented yet.");
     }
@@ -59,6 +59,16 @@ public class Smartphone extends Electronics implements Discountable {
     @Override
 
     public void printOutTotalPrice() {
-        System.out.println("Total price of smarphone" + getPrice());
+        System.out.println("Total price of smartphone" + getPrice());
+    }
+    @Override
+    public void setDiscountedPrice() {
+        super.setPrice(super.getPrice() * 0.75);
+    }
+
+    /** Overloading: setDiscountedPrice with specified discount percent */
+    public void setDiscountedPrice(int discountPercent) {
+
+        super.setPrice(super.getPrice() * (double) discountPercent / 100);
     }
 }

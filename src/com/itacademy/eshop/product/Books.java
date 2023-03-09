@@ -34,5 +34,7 @@ public class Books extends Product {
     public void printOutTotalPrice() {
 
     }
-
+    @Override
+    public void setDiscountedPrice() {
+    }
 }
