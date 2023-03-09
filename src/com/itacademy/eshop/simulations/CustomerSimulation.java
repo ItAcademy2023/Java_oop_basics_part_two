@@ -1,5 +1,6 @@
 package com.itacademy.eshop.simulations;
 
+import com.itacademy.eshop.exceptions.DuplicateProductException;
 import com.itacademy.eshop.exceptions.ProductNotFoundException;
 import com.itacademy.eshop.product.Review;
 import com.itacademy.eshop.shop.Eshop;
@@ -19,7 +20,7 @@ public class CustomerSimulation {
         shoppingCart = new ShoppingCart();
     }
 
-    public ShoppingCart simulateCustomerShopping() throws ProductNotFoundException {
+    public ShoppingCart simulateCustomerShopping() throws ProductNotFoundException, DuplicateProductException {
         addProductsToShoppingCart();
         removeProductsFromShoppingCart();
         leaveReviewsAndRatingsForProducts();

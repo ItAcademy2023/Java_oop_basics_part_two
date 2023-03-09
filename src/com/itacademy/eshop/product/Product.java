@@ -46,6 +46,16 @@ public abstract class Product {
         return sum / reviews.size();
     }
 
+    public double getHighestRating() {
+        double currentRating = 0;
+        for (Review review : reviews) {
+            if (currentRating < review.getRating()) {
+                currentRating = review.getRating();
+            }
+        }
+        return currentRating;
+    }
+
     public void addReview(Review review) {
         reviews.add(review);
     }
@@ -57,5 +67,5 @@ public abstract class Product {
 
     public abstract void displayProductInfo();
 
-
+    public abstract void newAbstractMethod();
 }
