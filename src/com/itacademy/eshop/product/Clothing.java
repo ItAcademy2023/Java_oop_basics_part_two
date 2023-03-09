@@ -3,7 +3,7 @@ package com.itacademy.eshop.product;
 import com.itacademy.eshop.interfaces.Returnable;
 import com.itacademy.eshop.product.types.Category;
 
-public abstract class Clothing extends Product implements Returnable {
+public class Clothing extends Product implements Returnable {
 
     String size;
     public Clothing(String name, double price, Category category, String size) {
@@ -12,4 +12,19 @@ public abstract class Clothing extends Product implements Returnable {
     }
 
     public String getSize() { return this.size; }
+
+    @Override
+    public String returnProduct() {
+        return null;
+    }
+
+    @Override
+    public void displayProductInfo() {
+
+    }
+
+    @Override
+    public void displayProductColor() {
+
+    }
 }
