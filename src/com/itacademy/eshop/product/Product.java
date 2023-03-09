@@ -70,5 +70,9 @@ public abstract class Product {
 
     public abstract void displayProductColor();
 
+    public void createProducts() {
+        System.out.println("Object created");
+    }
+
 
 }
