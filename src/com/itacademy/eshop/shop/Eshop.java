@@ -1,7 +1,9 @@
 package com.itacademy.eshop.shop;
 
+import com.itacademy.eshop.exceptions.DuplicateProductException;
 import com.itacademy.eshop.exceptions.ProductNotFoundException;
 import com.itacademy.eshop.product.Product;
+import com.itacademy.eshop.product.Review;
 import com.itacademy.eshop.product.types.Category;
 
 import java.util.ArrayList;
@@ -25,8 +27,21 @@ public class Eshop {
         }
     }
 
-    public void addProduct(Product shirt) {
-        products.add(shirt);
+    public void getAllProductsByCategory(Category category) {
+        for (Product product: products) {
+            if (product.getCategory() == category) {
+                System.out.println(product.getName());
+            }
+        }
+    }
+
+    public void addProduct(Product shirt) throws DuplicateProductException {
+
+        if (products.contains(shirt)) {
+            throw new DuplicateProductException("This product already exists.");
+        } else {
+            products.add(shirt);
+        }
     }
 
 

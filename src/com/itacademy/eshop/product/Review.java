@@ -15,11 +15,23 @@ public class Review {
         return author;
     }
 
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
     public int getRating() {
         return rating;
     }
 
+    public void setRating(int rating) {
+        this.rating = rating;
+    }
+
     public String getComment() {
         return comment;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
     }
 }

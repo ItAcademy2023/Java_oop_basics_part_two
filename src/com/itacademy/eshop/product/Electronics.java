@@ -13,6 +13,15 @@ public abstract class Electronics extends Product {
         this.brand = brand;
     }
 
+    @Override
+    public void displayProductInfo() {
+        System.out.println("Product name: " + getName());
+        System.out.println("Price: " + getPrice());
+        System.out.println("Category: " + getCategory());
+        System.out.println("Voltage: " + getVoltage());
+        System.out.println("Brand: " + getBrand());
+    }
+
     public String getVoltage() {
         return voltage;
     }
@@ -20,4 +29,5 @@ public abstract class Electronics extends Product {
     public String getBrand() {
         return brand;
     }
+
 }

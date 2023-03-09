@@ -1,6 +1,8 @@
 package com.itacademy.eshop;
 
+import com.itacademy.eshop.exceptions.DuplicateProductException;
 import com.itacademy.eshop.exceptions.ProductNotFoundException;
+import com.itacademy.eshop.product.types.Category;
 import com.itacademy.eshop.services.ShopService;
 import com.itacademy.eshop.shop.Eshop;
 import com.itacademy.eshop.shop.ShoppingCart;
@@ -9,7 +11,7 @@ import com.itacademy.eshop.simulations.ManagerSimulation;
 
 public class Runner {
 
-    public void run() throws ProductNotFoundException {
+    public void run() throws ProductNotFoundException, DuplicateProductException {
         ShopService shopService = new ShopService();
         Eshop shop = shopService.createShop();
 
@@ -33,7 +35,11 @@ public class Runner {
          * */
 
         ManagerSimulation managerSimulation = new ManagerSimulation(shop);
-        managerSimulation.simulate();
+        try {
+            managerSimulation.simulate();
+        } catch (DuplicateProductException e) {
+            System.out.println("Duplicate product found: " + e.getMessage());
+        }
         /**
          * After the simulation, the shop should contain at least on product per category except FOOD.
          * Should contain products with the following names: "Shirt", "Book".

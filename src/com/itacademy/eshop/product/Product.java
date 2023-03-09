@@ -25,7 +25,8 @@ public abstract class Product {
         return price;
     }
 
-    public Category getCategory() {        return category;
+    public Category getCategory() {
+        return category;
     }
 
     public ArrayList<Review> getReviews() {
@@ -33,10 +34,10 @@ public abstract class Product {
     }
 
     /**
-     getAverageRating(): This method encapsulates the calculation of the average rating of a product's reviews.
-     By computing the average internally based on the private reviews field and returning only the result, it hides
-     the implementation details and complexity of the calculation from external code, making
-     the code more modular and easier to maintain.
+     * getAverageRating(): This method encapsulates the calculation of the average rating of a product's reviews.
+     * By computing the average internally based on the private reviews field and returning only the result, it hides
+     * the implementation details and complexity of the calculation from external code, making
+     * the code more modular and easier to maintain.
      */
     public double getAverageRating() {
         double sum = 0;
@@ -50,12 +51,14 @@ public abstract class Product {
         reviews.add(review);
     }
 
-
     public void setPrice(int price) {
         this.price = price;
     }
 
+    public void setPrice(double price) {this.price = price;}
+
     public abstract void displayProductInfo();
 
+    public abstract void displayAdditionalInfo();
 
 }
