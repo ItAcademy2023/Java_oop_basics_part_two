@@ -46,6 +46,17 @@ public abstract class Product {
         return sum / reviews.size();
     }
 
+    public int getTotalAmountOfReviewsBelow3() {
+        int sum = 0;
+        for (Review review : reviews) {
+            if (review.getRating() < 3) {
+                sum = +1;
+            }
+        }
+        return sum;
+    }
+
+
     public void addReview(Review review) {
         reviews.add(review);
     }
