@@ -83,4 +83,9 @@ public class Computer extends Electronics implements Discountable {
     public void printOutTotalPrice() {
         System.out.println("Total price of computer" + getPrice());
     }
+
+    @Override
+    public void setDiscountedPrice() {
+
+    }
 }

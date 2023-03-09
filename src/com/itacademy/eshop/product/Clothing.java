@@ -38,6 +38,11 @@ public class Clothing extends Product {
     }
 
     @Override
+    public void setDiscountedPrice() {
+
+    }
+
+    @Override
     public double getPrice() {
         /**
          * getPrice is an example of polymorphism: it overrides the getPrice method defined in Product,

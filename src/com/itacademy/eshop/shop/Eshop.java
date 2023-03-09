@@ -37,12 +37,9 @@ public class Eshop {
             if(p.equals(product)){
                 throw new DuplicateProductException("Product already exists");
             }else{
-                products.add(product);
             }
-
         }
-
-
+        products.add(product);
     }
 
 
