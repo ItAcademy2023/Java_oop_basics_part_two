@@ -40,6 +40,9 @@ public class ShopService {
         Product product4 = new Clothing("Shirt", 9, CLOTHING);
         products.add(product4);
 
+        Product product5 = new Clothing("Shirt", 9, CLOTHING);
+        products.add(product5);
+
         /**
          * Should return a list of products. Should contain at least 6 products,
          * Each product must be different class. For example: Computer, Shirt etc.

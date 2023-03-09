@@ -38,7 +38,7 @@ public class Runner {
         try {
             managerSimulation.simulate();
         } catch (DuplicateProductException e) {
-            System.out.println("Duplicate product was found" + e.getMessage());
+            System.out.println("\nDuplicate product was found!!!!!!!!!!!!\n");
         }
 
         /**
