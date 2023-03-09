@@ -70,7 +70,7 @@ public abstract class Product {
     }
 
 
-    public void setPrice(int price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
