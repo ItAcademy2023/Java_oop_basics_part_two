@@ -43,4 +43,9 @@ public class Computer extends Electronics implements Discountable {
         //some implementation
         return getPrice() * 0.9;
     }
+
+    @Override
+    public void displayProductColor() {
+
+    }
 }
