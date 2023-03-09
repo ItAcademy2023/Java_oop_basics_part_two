@@ -12,12 +12,21 @@ public abstract class Electronics extends Product {
         this.voltage = voltage;
         this.brand = brand;
     }
-
     public String getVoltage() {
         return voltage;
     }
 
     public String getBrand() {
         return brand;
+    }
+    @Override
+    public void displayProductInfo() {
+        System.out.println(
+                "Name: " + getName()
+                        + "Price: " + getPrice()
+                        + "Category: " + getCategory()
+                        + "Voltage: " + getVoltage()
+                        + "Brand: " + getBrand()
+        );
     }
 }
