@@ -13,4 +13,9 @@ public class Admin extends Payment {
     public void displayUserInfo() {
         System.out.println("I am Admin");
     }
+
+    @Override
+    public void processPayment() {
+        System.out.println("I do not need to pay, payment is processed");
+    }
 }

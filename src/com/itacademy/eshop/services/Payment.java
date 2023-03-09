@@ -20,11 +20,13 @@ public abstract class Payment {
     public double getId() {
         return id;
     }
-
     public boolean getCanMakePayment() {
         return canMakePayment;
     }
 
+
     public abstract void displayUserInfo();
+
+    public abstract void processPayment();
 
 }
