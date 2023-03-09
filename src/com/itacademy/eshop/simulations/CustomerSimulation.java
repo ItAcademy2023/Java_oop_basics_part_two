@@ -31,18 +31,19 @@ public class CustomerSimulation {
          * User browses the shop and adds 4 products to the shopping cart.
          * One of them should be a book and other should be a shirt.
          */
+        shoppingCart.addProduct(shop.findProductByName("Laptop"));
 
         shoppingCart.addProduct(shop.findProductByName("Shirt"));
-        shoppingCart.addProduct(shop.findProductByName("Book"));
-        shoppingCart.addProduct(shop.findProductByName("product one"));
-        shoppingCart.addProduct(shop.findProductByName("product two"));
+//        shoppingCart.addProduct(shop.findProductByName("Book"));
+//        shoppingCart.addProduct(shop.findProductByName("product one"));
+//        shoppingCart.addProduct(shop.findProductByName("product two"));
     }
 
     private void removeProductsFromShoppingCart() {
         /**
          * User removes shirt from the shopping cart.
          */
-        shoppingCart.removeProductByName("Shirt");
+        shoppingCart.removeProductByName("product one");
     }
 
     private void leaveReviewsAndRatingsForProducts() {
@@ -52,7 +53,7 @@ public class CustomerSimulation {
         Review review = new Review("John Doe", 5, "This is a review for the shirt");
 
         try {
-            shoppingCart.getProductByName("Book").addReview(review);
+            shoppingCart.getProductByName("Shirt").addReview(review);
         } catch (ProductNotFoundException e) {
             System.out.println("Review was not left, " + e.getMessage());
         }

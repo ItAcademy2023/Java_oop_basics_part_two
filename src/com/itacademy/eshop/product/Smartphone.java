@@ -3,34 +3,32 @@ package com.itacademy.eshop.product;
 import com.itacademy.eshop.interfaces.Discountable;
 import com.itacademy.eshop.product.types.Category;
 
-import java.util.ArrayList;
-
-public class Computer extends Electronics implements Discountable {
-    /*
+public class Smartphone extends Electronics implements Discountable {
+    /**
      * Computer inherits from Electronics, which in turn inherits from Product, providing all of those properties
      */
     private String processor;
-    private int ram;
+    private String screen;
 
-    public Computer(String name, double price, Category category, String voltage, String brand, String processor, int ram) {
+    public Smartphone(String name, double price, Category category, String voltage, String brand, String processor, String screen) {
         super(name, price, category, voltage, brand);//an object of a computer
         this.processor = processor;
-        this.ram = ram;
+        this.screen = screen;
     }
 
     public String getProcessor() {
         return processor;
     }
 
-    public int getRam() {
-        return ram;
+    public String getScreen() {
+        return screen;
     }
 
     /**
      * This annotation indicates that the getPrice() method is being overridden from the parent class.
      */
 
-
+    @Override
     public double getPrice() {
         /**
          * getPrice is an example of polymorphism: it overrides the getPrice method defined in Product,
@@ -39,26 +37,6 @@ public class Computer extends Electronics implements Discountable {
         return super.getPrice() * 1.2;// takes price from the parent which is Product
     }
 
-    public Category getCategoryElectronics() {
-        return Category.ELECTRONICS;
-    }
-    //always goes to the closest method, if it is override also
-
-
-    public ArrayList<Review> getReview() {
-        return super.getReviews();
-    }
-//Overloading
-    public ArrayList<Review> getReview(int rating) {
-        ArrayList<Review> reviews = new ArrayList<>();
-        for (Review review : super.getReviews()) {
-            if (review.getRating() >= rating) {
-                reviews.add(review);
-            }
-
-        }
-        return reviews;
-    }
 
     @Override
     public void displayProductInfo() {
@@ -66,10 +44,11 @@ public class Computer extends Electronics implements Discountable {
  *   print all the fiellds
  * main abstract which is on the product class*/
         System.out.println(
-                " Category " + getCategory() +
-                        " Voltage " + getVoltage() +
-                        " Price of Electronics" + getPrice());
+                "Category" + getCategory() +
+                        "Voltage" + getVoltage() +
+                        "Price" + getPrice());
 
+        throw new UnsupportedOperationException("displayProductInfo() method is not implemented yet.");
     }
 
     @Override
@@ -77,10 +56,9 @@ public class Computer extends Electronics implements Discountable {
         //some implementation
         return getPrice() * 0.9;
     }
-
     @Override
 
     public void printOutTotalPrice() {
-        System.out.println("Total price of computer" + getPrice());
+        System.out.println("Total price of smarphone" + getPrice());
     }
 }

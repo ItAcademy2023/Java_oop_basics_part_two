@@ -10,6 +10,7 @@ public abstract class Product {
     private Category category;
     private ArrayList<Review> reviews;
 
+    //the parent
     public Product(String name, double price, Category category) {
         this.name = name;
         this.price = price;
@@ -21,11 +22,14 @@ public abstract class Product {
         return name;
     }
 
+
     public double getPrice() {
         return price;
     }
 
-    public Category getCategory() {        return category;
+
+    public Category getCategory() {
+        return category;
     }
 
     public ArrayList<Review> getReviews() {
@@ -33,10 +37,10 @@ public abstract class Product {
     }
 
     /**
-     getAverageRating(): This method encapsulates the calculation of the average rating of a product's reviews.
-     By computing the average internally based on the private reviews field and returning only the result, it hides
-     the implementation details and complexity of the calculation from external code, making
-     the code more modular and easier to maintain.
+     * getAverageRating(): This method encapsulates the calculation of the average rating of a product's reviews.
+     * By computing the average internally based on the private reviews field and returning only the result, it hides
+     * the implementation details and complexity of the calculation from external code, making
+     * the code more modular and easier to maintain.
      */
     public double getAverageRating() {
         double sum = 0;
@@ -44,6 +48,21 @@ public abstract class Product {
             sum += review.getRating();
         }
         return sum / reviews.size();
+    }
+
+    /**
+     * Write similar public method to getAverageRating that uses private
+     * fields and some logic to return desired output.
+     */
+    public ArrayList<Review> getReview(int rating) {
+        ArrayList<Review> reviews = new ArrayList<>();
+        for (Review review : getReviews()) {
+            if (review.getRating() >= rating) {
+                reviews.add(review);
+            }
+
+        }
+        return reviews;
     }
 
     public void addReview(Review review) {
@@ -55,7 +74,8 @@ public abstract class Product {
         this.price = price;
     }
 
-    public abstract void displayProductInfo();
+    public abstract void displayProductInfo();//overrride in other classes
 
 
+    public abstract void printOutTotalPrice();
 }

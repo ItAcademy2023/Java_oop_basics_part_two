@@ -1,5 +1,6 @@
 package com.itacademy.eshop.simulations;
 
+import com.itacademy.eshop.product.Clothing;
 import com.itacademy.eshop.product.Computer;
 import com.itacademy.eshop.product.types.Category;
 import com.itacademy.eshop.shop.Eshop;
@@ -29,6 +30,10 @@ public class ManagerSimulation {
          * All must be different types of products.
          */
         Computer computer = new Computer("Laptop", 1000, Category.ELECTRONICS, "12", "apple", "intel", 16);
+
+        Clothing shirt = new Clothing ("Shirt", 10, Category.CLOTHING, "leather", "winter");
+        shop.addProduct(shirt);
+
         shop.addProduct(computer);
     }
 

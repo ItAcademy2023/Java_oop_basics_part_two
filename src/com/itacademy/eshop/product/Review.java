@@ -1,6 +1,6 @@
 package com.itacademy.eshop.product;
 
-public class Review {
+public class Review extends Exception{
     public String author;
     public int rating;
     public String comment;
@@ -22,4 +22,9 @@ public class Review {
     public String getComment() {
         return comment;
     }
+    public ProductNotFoundException(String message) {
+        super(message);
+    }
+
+
 }
