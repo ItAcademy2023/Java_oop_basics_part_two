@@ -1,5 +1,6 @@
 package com.itacademy.eshop.shop;
 
+import com.itacademy.eshop.exceptions.DuplicateProductException;
 import com.itacademy.eshop.exceptions.ProductNotFoundException;
 import com.itacademy.eshop.product.Product;
 import com.itacademy.eshop.product.types.Category;
@@ -25,8 +26,17 @@ public class Eshop {
         }
     }
 
-    public void addProduct(Product shirt) {
-        products.add(shirt);
+    public void addProduct(Product product) throws DuplicateProductException {
+        for(Product p : products){
+            if(p.equals(product)){
+              throw new DuplicateProductException("Product already exists");
+            }else{
+                products.add(product);
+            }
+
+        }
+
+
     }
 
 
