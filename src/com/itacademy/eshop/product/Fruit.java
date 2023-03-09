@@ -1,11 +1,16 @@
 package com.itacademy.eshop.product;
 
+import com.itacademy.eshop.interfaces.Expirable;
 import com.itacademy.eshop.product.types.Category;
 
-public class Fruit extends Food{
+import java.time.Duration;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
+public class Fruit extends Food {
     private String fruitType;
-    public Fruit(String name, double price, Category category, double grossWeight, String fruitType) {
-        super(name, price, category, grossWeight);
+    public Fruit(String name, double price, Category category, double grossWeight, String fruitType, String expiryDate) {
+        super(name, price, category, grossWeight, expiryDate);
         this.fruitType = fruitType;
     }
     @Override
