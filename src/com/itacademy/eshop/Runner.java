@@ -13,6 +13,7 @@ public class Runner {
         ShopService shopService = new ShopService();
         Eshop shop = shopService.createShop();
 
+
         /**
          * Inheritance:
          *      1. Create at one or more class per each category that extends the Product class.
