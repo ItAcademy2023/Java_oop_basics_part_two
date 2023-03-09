@@ -10,6 +10,12 @@ public class Food extends Product {
 
     @Override
     public void displayProductInfo() {
+        System.out.println("This is food");
+    }
+
+    @Override
+    public void displayProductColor() {
 
     }
+
 }

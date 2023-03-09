@@ -10,6 +10,11 @@ public class Smartphone extends Electronics{
 
     @Override
     public void displayProductInfo() {
+        System.out.println("This is a computer");
+    }
+
+    @Override
+    public void displayProductColor() {
 
     }
 }

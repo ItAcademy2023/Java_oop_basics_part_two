@@ -11,6 +11,11 @@ public class Clothing extends Product {
 
     @Override
     public void displayProductInfo() {
+        System.out.println("This is a clothe");
+    }
+
+    @Override
+    public void displayProductColor() {
 
     }
 }

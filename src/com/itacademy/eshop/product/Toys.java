@@ -10,6 +10,11 @@ public class Toys extends Product {
 
     @Override
     public void displayProductInfo() {
+        System.out.println("This is a toy");
+    }
+
+    @Override
+    public void displayProductColor() {
 
     }
 }
