@@ -1,8 +1,9 @@
 package com.itacademy.eshop.product;
 
+import com.itacademy.eshop.interfaces.Returnable;
 import com.itacademy.eshop.product.types.Category;
 
-public abstract class Electronics extends Product {
+public abstract class Electronics extends Product implements Returnable {
 
     private String voltage;
     private String brand;

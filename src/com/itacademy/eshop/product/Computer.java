@@ -1,6 +1,7 @@
 package com.itacademy.eshop.product;
 
 import com.itacademy.eshop.interfaces.Discountable;
+import com.itacademy.eshop.interfaces.Returnable;
 import com.itacademy.eshop.product.types.Category;
 
 public class Computer extends Electronics implements Discountable {
@@ -39,8 +40,18 @@ public class Computer extends Electronics implements Discountable {
     }
 
     @Override
+    public void displayProductColor() {
+        System.out.println("Product color is black!");
+    }
+
+    @Override
     public double calculateDiscountedPrice() {
         //some implementation
         return getPrice() * 0.9;
+    }
+
+    @Override
+    public String returnProduct() {
+        return "This product can be returned for 2 years";
     }
 }
