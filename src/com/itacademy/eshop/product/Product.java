@@ -46,6 +46,10 @@ public abstract class Product {
         return sum / reviews.size();
     }
 
+    public void setAverageRating(String someName){
+        this.name = someName;
+    }
+
     public void addReview(Review review) {
         reviews.add(review);
     }
@@ -57,5 +61,6 @@ public abstract class Product {
 
     public abstract void displayProductInfo();
 
+public abstract void displayProductReview();
 
 }

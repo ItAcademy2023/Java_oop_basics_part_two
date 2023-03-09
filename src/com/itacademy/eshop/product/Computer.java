@@ -39,8 +39,37 @@ public class Computer extends Electronics implements Discountable {
     }
 
     @Override
+    public void displayProductReview() {
+        System.out.println(
+                "Category: " + getCategory() + "Voltage: " + getVoltage() +
+                        "price: " + getPrice()
+        );
+    }
+
+    @Override
     public double calculateDiscountedPrice() {
         //some implementation
-        return getPrice() * 0.9;
+        return getPrice() * 0.2;
     }
+
+    @Override
+    public double calculateDiscountedPrice(boolean isRegularCustomer) {
+        double newPrice = 0;
+        if(isRegularCustomer){
+           newPrice = getPrice() * 0.5;
+        }
+       return newPrice;
+    }
+
+    @Override
+    public double calculateDiscountedPrice(boolean isRegularCustomer, boolean referredFriend) {
+        double newPrice = 0;
+        if(isRegularCustomer && referredFriend){
+            newPrice = getPrice() * 0.9;
+        }
+        return newPrice;
+    }
+
+
+
 }

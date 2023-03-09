@@ -22,6 +22,8 @@ public class Eshop {
          */
         for (Product product : products) {
 //            product.displayProductInfo();
+            product.displayProductInfo();
+            System.out.println("--------------");
         }
     }
 
