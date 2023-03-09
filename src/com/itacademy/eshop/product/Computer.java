@@ -35,7 +35,7 @@ public class Computer extends Electronics implements Discountable {
 
     @Override
     public void displayProductInfo() {
-        throw new UnsupportedOperationException("displayProductInfo() method is not implemented yet.");
+        System.out.println("Category: "+getCategory()+"Voltage:" +getVoltage()+"Price: "+getPrice());
     }
 
     @Override

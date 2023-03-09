@@ -1,7 +1,7 @@
 package com.itacademy.eshop.product;
 
 import com.itacademy.eshop.product.types.Category;
-
+//task Inheritance 2.
 public class Smartphone extends Electronics {
 
     public Smartphone(String name, double price, Category category, String voltage, String brand) {
@@ -10,6 +10,6 @@ public class Smartphone extends Electronics {
 
     @Override
     public void displayProductInfo() {
-        
+
     }
 }
