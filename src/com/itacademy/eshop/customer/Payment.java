@@ -1,17 +1,19 @@
 package com.itacademy.eshop.customer;
 
+import com.itacademy.eshop.shop.ShoppingCart;
+
 public abstract class Payment {
     private String personName;
     private String personSurname;
-    private int paymentSize;
+    private int balance;
 
-    public Payment(String personName, String personSurname, int paymentSize) {
+    public Payment(String personName, String personSurname, int balance) {
         this.personName = personName;
         this.personSurname = personSurname;
-        this.paymentSize = paymentSize;
+        this.balance = balance;
     }
 
-    public abstract void displayPaymentDetails();
+    public abstract void processPayment(ShoppingCart shoppingCart);
 
     public String getPersonName() {
         return personName;
@@ -29,11 +31,11 @@ public abstract class Payment {
         this.personSurname = personSurname;
     }
 
-    public int getPaymentSize() {
-        return paymentSize;
+    public int getBalance() {
+        return balance;
     }
 
-    public void setPaymentSize(int paymentSize) {
-        this.paymentSize = paymentSize;
+    public void setPaymentSize(int balance) {
+        this.balance = balance;
     }
 }

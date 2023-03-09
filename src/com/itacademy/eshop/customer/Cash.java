@@ -1,6 +1,7 @@
 package com.itacademy.eshop.customer;
 
 import com.itacademy.eshop.customer.types.Currency;
+import com.itacademy.eshop.shop.ShoppingCart;
 
 public class Cash extends Payment{
     private Currency currency;
@@ -11,8 +12,14 @@ public class Cash extends Payment{
     }
 
     @Override
-    public void displayPaymentDetails() {
-        System.out.println(this.getPersonName() + " used cash witch currency was " + currency.toString());
+    public void processPayment(ShoppingCart shoppingCart) {
+        int newBalance = this.getBalance() - shoppingCart.getTotalPrice();
+        if (newBalance >= 0) {
+            System.out.println("After transaction your balance is " + newBalance + " " + currency.toString() + ".");
+        } else {
+            System.out.println("Transaction was canceled, because you are broke. You were short "
+                    + (-1 * newBalance) + " " + currency.toString() + ".");
+        }
     }
 
     public Currency getCurrency() {
@@ -22,4 +29,5 @@ public class Cash extends Payment{
     public void setCurrency(Currency currency) {
         this.currency = currency;
     }
+
 }

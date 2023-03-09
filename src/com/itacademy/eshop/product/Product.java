@@ -3,6 +3,8 @@ package com.itacademy.eshop.product;
 import com.itacademy.eshop.product.types.Category;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 
 public abstract class Product {
     private String name;

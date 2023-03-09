@@ -32,10 +32,8 @@ public class CustomerSimulation {
          * One of them should be a book and other should be a shirt.
          */
 
-        shoppingCart.addProduct(shop.findProductByName("Shirt"));
-        shoppingCart.addProduct(shop.findProductByName("Book"));
-        shoppingCart.addProduct(shop.findProductByName("product one"));
-        shoppingCart.addProduct(shop.findProductByName("product two"));
+        shoppingCart.addProduct(shop.findProductByName("Samsung laptop"));
+        shoppingCart.addProduct(shop.findProductByName("Hot dog"));
     }
 
     private void removeProductsFromShoppingCart() {
