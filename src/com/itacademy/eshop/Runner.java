@@ -51,7 +51,5 @@ public class Runner {
          * Should have total price combined by all products in the cart
          */
         shoppingCart.printShoppingCart();
-
-
     }
 }

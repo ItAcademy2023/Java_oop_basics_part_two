@@ -52,6 +52,4 @@ public class ManagerSimulation {
          */
         shop.removeProduct(category);
     }
-
-
 }

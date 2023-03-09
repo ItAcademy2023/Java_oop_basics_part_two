@@ -44,6 +44,7 @@ public class Eshop {
             }
         }
     }
+
     public void removeProduct(Category category) {
         for (int i = 0; i < products.size(); i++) {
             Product product = products.get(i);
@@ -70,6 +71,5 @@ public class Eshop {
             }
         }
         throw new ProductNotFoundException("Product with name " + name + " not found.");
-
     }
 }
