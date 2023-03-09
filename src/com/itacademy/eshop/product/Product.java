@@ -25,7 +25,7 @@ public abstract class Product {
         return price;
     }
 
-    public Category getCategory() {        return category;
+    public Category getCategory() { return category;
     }
 
     public ArrayList<Review> getReviews() {
@@ -55,7 +55,9 @@ public abstract class Product {
         this.price = price;
     }
 
+
     public abstract void displayProductInfo();
 
-
+    public abstract void displaySettings();
 }
+
