@@ -25,12 +25,13 @@ public class Book extends Product implements AgeRestricted {
 
     @Override
     public void displayProductInfo() {
-        System.out.println(
-                "Name: " + getName() +
-                        "\nPrice: " + getPrice() +
-                        "\nCategory: " + getCategory() +
-                        "\nGenre: " + getGenre()
+        String productInfo = String.format("Name: %s \nPrice: %s \nCategory: %s \nGenre: %s",
+                getName(),
+                getPrice(),
+                getCategory(),
+                getGenre()
         );
+        System.out.println(productInfo);
     }
 
     @Override
