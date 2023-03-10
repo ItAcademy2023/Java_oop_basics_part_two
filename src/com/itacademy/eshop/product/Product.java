@@ -1,10 +1,11 @@
 package com.itacademy.eshop.product;
 
+import com.itacademy.eshop.interfaces.Electrify;
 import com.itacademy.eshop.product.types.Category;
 
 import java.util.ArrayList;
 
-public abstract class Product {
+public abstract class Product implements Electrify {
     private String name;
     private double price;
     private Category category;
@@ -25,7 +26,8 @@ public abstract class Product {
         return price;
     }
 
-    public Category getCategory() {        return category;
+    public Category getCategory() {
+        return category;
     }
 
     public ArrayList<Review> getReviews() {
@@ -33,10 +35,10 @@ public abstract class Product {
     }
 
     /**
-     getAverageRating(): This method encapsulates the calculation of the average rating of a product's reviews.
-     By computing the average internally based on the private reviews field and returning only the result, it hides
-     the implementation details and complexity of the calculation from external code, making
-     the code more modular and easier to maintain.
+     * getAverageRating(): This method encapsulates the calculation of the average rating of a product's reviews.
+     * By computing the average internally based on the private reviews field and returning only the result, it hides
+     * the implementation details and complexity of the calculation from external code, making
+     * the code more modular and easier to maintain.
      */
     public double getAverageRating() {
         double sum = 0;
@@ -57,5 +59,16 @@ public abstract class Product {
 
     public abstract void displayProductInfo();
 
+    //Create a new abstract method in the Product class that will be overridden in the subclasses
+    public abstract void showOnlyImportant();
+
+    //Implement interface
+    public void checkIfItCanShockYou() {
+        if (category == Category.ELECTRONICS) {
+            System.out.println("This item can shock you");
+        } else {
+            System.out.println("This item wont shock you");
+        }
+    }
 
 }
