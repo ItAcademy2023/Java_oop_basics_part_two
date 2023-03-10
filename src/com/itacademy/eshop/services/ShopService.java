@@ -27,7 +27,7 @@ public class ShopService {
          * So you will have to create at least 6 classes that extend Product class.
          */
 
-        Computer computer = new Computer("Computer name",2500,Category.ELECTRONICS,"25 volts","Dell","Intel core i5",8);
+        Computer computer = new Computer("Computer name",2500,Category.ELECTRONICS,25859483,"Dell","Premium Brand","Intel core i3", 4);
 
         throw new UnsupportedOperationException("createProducts() method is not implemented yet.");
     }
