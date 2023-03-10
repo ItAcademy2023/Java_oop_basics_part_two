@@ -5,10 +5,10 @@ import com.itacademy.eshop.product.types.Category;
 import java.util.ArrayList;
 
 public abstract class Product {
-    private String name;
+    private final String name;
     private double price;
-    private Category category;
-    private ArrayList<Review> reviews;
+    private final Category category;
+    private final ArrayList<Review> reviews;
 
     public Product(String name, double price, Category category) {
         this.name = name;
@@ -25,7 +25,8 @@ public abstract class Product {
         return price;
     }
 
-    public Category getCategory() {        return category;
+    public Category getCategory() {
+        return category;
     }
 
     public ArrayList<Review> getReviews() {
@@ -33,10 +34,10 @@ public abstract class Product {
     }
 
     /**
-     getAverageRating(): This method encapsulates the calculation of the average rating of a product's reviews.
-     By computing the average internally based on the private reviews field and returning only the result, it hides
-     the implementation details and complexity of the calculation from external code, making
-     the code more modular and easier to maintain.
+     * getAverageRating(): This method encapsulates the calculation of the average rating of a product's reviews.
+     * By computing the average internally based on the private reviews field and returning only the result, it hides
+     * the implementation details and complexity of the calculation from external code, making
+     * the code more modular and easier to maintain.
      */
     public double getAverageRating() {
         double sum = 0;
@@ -57,5 +58,6 @@ public abstract class Product {
 
     public abstract void displayProductInfo();
 
+    public abstract void deleteReviewByAuthor(String author);
 
 }

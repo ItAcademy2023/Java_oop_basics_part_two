@@ -11,8 +11,8 @@ import com.itacademy.eshop.shop.ShoppingCart;
  * as well as leave reviews and ratings for the products.
  */
 public class CustomerSimulation {
-    private Eshop shop;
-    private ShoppingCart shoppingCart;
+    private final Eshop shop;
+    private final ShoppingCart shoppingCart;
 
     public CustomerSimulation(Eshop shop) {
         this.shop = shop;
@@ -34,8 +34,8 @@ public class CustomerSimulation {
 
         shoppingCart.addProduct(shop.findProductByName("Shirt"));
         shoppingCart.addProduct(shop.findProductByName("Book"));
-        shoppingCart.addProduct(shop.findProductByName("product one"));
-        shoppingCart.addProduct(shop.findProductByName("product two"));
+        shoppingCart.addProduct(shop.findProductByName("Teddy"));
+        shoppingCart.addProduct(shop.findProductByName("Samsung TV"));
     }
 
     private void removeProductsFromShoppingCart() {
@@ -56,8 +56,5 @@ public class CustomerSimulation {
         } catch (ProductNotFoundException e) {
             System.out.println("Review was not left, " + e.getMessage());
         }
-
     }
-
-
 }
