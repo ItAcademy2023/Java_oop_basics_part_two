@@ -20,4 +20,11 @@ public abstract class Electronics extends Product {
     public String getBrand() {
         return brand;
     }
+
+    public void displayProductInfo() {
+        System.out.println(
+                "Category:" + getCategory()
+
+        );
+    }
 }

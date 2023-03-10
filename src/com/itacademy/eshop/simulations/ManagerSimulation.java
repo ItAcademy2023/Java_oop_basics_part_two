@@ -1,6 +1,9 @@
 package com.itacademy.eshop.simulations;
 
 import com.itacademy.eshop.product.Computer;
+import com.itacademy.eshop.product.Product;
+import com.itacademy.eshop.product.Smartphone;
+import com.itacademy.eshop.product.TV;
 import com.itacademy.eshop.product.types.Category;
 import com.itacademy.eshop.shop.Eshop;
 
@@ -24,6 +27,9 @@ public class ManagerSimulation {
     }
 
     private void addThreeNewProducts() {
+
+        Product superSmartTv = new TV("Super tv", 1500, Category.ELECTRONICS, "220", "Sony");
+        Product superSmartphone = new Smartphone("Super smart", 20000, Category.ELECTRONICS, "12V", "Dobilas");
         /**
          * adds three new products to the shop. One of them should be a book, one should be a Laptop, and one should be a shirt.
          * All must be different types of products.
