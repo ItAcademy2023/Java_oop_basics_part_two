@@ -1,9 +1,6 @@
 package com.itacademy.eshop.simulations;
 
-import com.itacademy.eshop.product.Computer;
-import com.itacademy.eshop.product.Product;
-import com.itacademy.eshop.product.Smartphone;
-import com.itacademy.eshop.product.TV;
+import com.itacademy.eshop.product.*;
 import com.itacademy.eshop.product.types.Category;
 import com.itacademy.eshop.shop.Eshop;
 
@@ -23,19 +20,26 @@ public class ManagerSimulation {
         addThreeNewProducts();
         findAndRemoveOneProduct();
         changePriceForOneProduct();
-        removeAllProductsWithCategory(Category.FOOD);
+//        removeAllProductsWithCategory(Category.FOOD);
     }
 
     private void addThreeNewProducts() {
 
-        Product superSmartTv = new TV("Super tv", 1500, Category.ELECTRONICS, "220", "Sony");
-        Product superSmartphone = new Smartphone("Super smart", 20000, Category.ELECTRONICS, "12V", "Dobilas");
+
         /**
          * adds three new products to the shop. One of them should be a book, one should be a Laptop, and one should be a shirt.
          * All must be different types of products.
          */
         Computer computer = new Computer("Laptop", 1000, Category.ELECTRONICS, "12", "apple", "intel", 16);
         shop.addProduct(computer);
+        Novel oliverTwist = new Novel("Book", 15, Category.BOOKS, "Charles Dickens", "Serial novel", "Oliver Twist" );
+        shop.addProduct(oliverTwist);
+        Chips chips = new Chips("Chips", 1.99, Category.FOOD, "Lay's", "onion");
+        shop.addProduct(chips);
+        Shirt summerShirt = new Shirt("Shirt", 35, Category.CLOTHING, "green");
+        shop.addProduct(summerShirt);
+        ToyCar toyCar =  new ToyCar("ToyCar", 25.99, Category.TOYS, "blue", true);
+        shop.addProduct(toyCar);
     }
 
     private void findAndRemoveOneProduct() {
@@ -50,6 +54,7 @@ public class ManagerSimulation {
          * manager searches for a product with the name "Shirt" (the one added a moment before) and changes its price to 20
          */
         shop.changePriceForProduct("Shirt", 20);
+
     }
 
     private void removeAllProductsWithCategory(Category category) {

@@ -2,7 +2,7 @@ package com.itacademy.eshop.services;
 
 import com.itacademy.eshop.product.*;
 import com.itacademy.eshop.product.types.Category;
-import com.itacademy.eshop.product.types.Novel;
+import com.itacademy.eshop.product.Novel;
 import com.itacademy.eshop.shop.Eshop;
 
 import java.util.ArrayList;
@@ -28,10 +28,11 @@ public class ShopService {
          */
         ArrayList<Product> products = new ArrayList<>();
         new Computer("Computer", 599, Category.ELECTRONICS, "123", "Acer", "intel", 12);
-        new Shirt("Shirt", 35, Category.CLOTHING);
+        new Shirt("Shirt", 35, Category.CLOTHING, "green");
         new Novel("Book", 15, Category.BOOKS, "Charles Dickens", "Serial novel", "Oliver Twist" );
-
-
+        new Chips("Chips", 1.99, Category.FOOD, "Lay's", "onion");
+        new TV("TV", 699, Category.ELECTRONICS, "220V", "LG", false);
+        new ToyCar("ToyCar", 25.99, Category.TOYS, "blue", true);
 
         return products;
     }
