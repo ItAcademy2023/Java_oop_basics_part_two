@@ -16,12 +16,12 @@ public abstract class Clothing extends Product {
 
     }
 
-    public int getSeason() {
-        return forAge;
+    public Seasons getSeason() {
+        return seasons;
     }
 
-    public Seasons getForAge() {
-        return seasons;
+    public int getForAge() {
+        return forAge;
     }
 
     public String getType() {
