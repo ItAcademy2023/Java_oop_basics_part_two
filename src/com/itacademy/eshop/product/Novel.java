@@ -21,10 +21,11 @@ public class Novel extends Book {
     @Override
     public void displayProductInfo(){
         System.out.println(
-                "Category: " + getCategory() +
-                        "Author: " + getAuthor() +
-                        "Genre: " + getGenre() +
-                        "Title: " + getTitle()
+                " Category: " + getCategory() +";"+
+                        " Author: " + getAuthor() +";"+
+                        " Genre: " + getGenre() +";"+
+                        " Title: " + getTitle() +";"+
+                        " Price: " + getPrice()
         );
     }
 

@@ -18,10 +18,11 @@ public class ToyCar extends Toy{
     @Override
     public void displayProductInfo(){
         System.out.println(
-                "Category: " + getCategory() +
-                        "Name: " + getName() +
-                        "Color: " + getColor() +
-                        "Batteries included: " + isBatteriesIncluded()
+                " Category: " + getCategory() +";"+
+                        " Name: " + getName() +";"+
+                        " Color: " + getColor() +";"+
+                        " Batteries included: " + isBatteriesIncluded() +";"+
+                        " Price: " + getPrice()
         );
     }
 }

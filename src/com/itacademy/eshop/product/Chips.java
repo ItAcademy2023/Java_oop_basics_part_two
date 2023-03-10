@@ -18,9 +18,10 @@ public class Chips extends Food{
     @Override
     public void displayProductInfo(){
         System.out.println(
-                "Category: " + getCategory() +
-                        "Brand: " + getBrand() +
-                        "Flavor: " + getFlavor()
+                " Category: " + getCategory() +";"+
+                        " Brand: " + getBrand() +";"+
+                        " Flavor: " + getFlavor() +";"+
+                        " Price: " + getPrice()
         );
     }
 }
