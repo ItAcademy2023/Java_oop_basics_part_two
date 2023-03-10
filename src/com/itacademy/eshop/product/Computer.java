@@ -39,8 +39,15 @@ public class Computer extends Electronics implements Discountable {
     }
 
     @Override
+    public void abstractOverridenMethod() {
+        throw new UnsupportedOperationException("abstractOverriddenMethod() method is not implemented yet.");
+    }
+
+    @Override
     public double calculateDiscountedPrice() {
         //some implementation
         return getPrice() * 0.9;
     }
+
+
 }
