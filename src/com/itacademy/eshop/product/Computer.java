@@ -4,8 +4,9 @@ import com.itacademy.eshop.interfaces.Discountable;
 import com.itacademy.eshop.product.types.Category;
 
 public class Computer extends Electronics implements Discountable {
-    /** Computer inherits from Electronics, which in turn inherits from Product, providing all of those properties
-    */
+    /**
+     * Computer inherits from Electronics, which in turn inherits from Product, providing all of those properties
+     */
     private String processor;
     private int ram;
 
@@ -23,7 +24,13 @@ public class Computer extends Electronics implements Discountable {
         return ram;
     }
 
-    /** This annotation indicates that the getPrice() method is being overridden from the parent class.*/
+    public String getCpuAndRam() {
+        return processor + ram;
+    }
+
+    /**
+     * This annotation indicates that the getPrice() method is being overridden from the parent class.
+     */
     @Override
     public double getPrice() {
         /**
@@ -33,9 +40,22 @@ public class Computer extends Electronics implements Discountable {
         return super.getPrice() * 1.2;
     }
 
+    public double getPrice(double discount) {
+        return super.getPrice() * discount;
+    }
+
     @Override
     public void displayProductInfo() {
-        throw new UnsupportedOperationException("displayProductInfo() method is not implemented yet.");
+        System.out.println(
+                "Category:" + getCategory() +
+                        "Volatge:" + getVoltage() +
+                        "Price" + getPrice()
+        );
+    }
+
+    @Override
+    public void displayProductImage() {
+
     }
 
     @Override
@@ -43,4 +63,6 @@ public class Computer extends Electronics implements Discountable {
         //some implementation
         return getPrice() * 0.9;
     }
+
+
 }
