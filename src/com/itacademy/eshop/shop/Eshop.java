@@ -1,5 +1,6 @@
 package com.itacademy.eshop.shop;
 
+import com.itacademy.eshop.exceptions.DuplicateProductException;
 import com.itacademy.eshop.exceptions.ProductNotFoundException;
 import com.itacademy.eshop.product.Product;
 import com.itacademy.eshop.product.types.Category;
@@ -21,14 +22,17 @@ public class Eshop {
          * Make Product class abstract and implement displayProductInfo() method in each child class.
          */
         for (Product product : products) {
-//            product.displayProductInfo();
+            product.displayProductInfo();
         }
     }
 
-    public void addProduct(Product shirt) {
-        products.add(shirt);
+    public void addProduct(Product shirt) throws DuplicateProductException {
+        if (!products.contains(shirt)) {
+            products.add(shirt);
+        } else {
+            throw new DuplicateProductException("That`s bad");
+        }
     }
-
 
     /** This is an example of method overloading
      * We have created two methods with the same name "removeProduct", but with different parameters
@@ -70,6 +74,13 @@ public class Eshop {
             }
         }
         throw new ProductNotFoundException("Product with name " + name + " not found.");
+    }
 
+    public void displayProductsWithCategory(ArrayList<Product> products, Category category) {
+        for (int i = 0; i < products.size(); i++) {
+            if (products.get(i).getCategory().equals(category)) {
+                System.out.println(products.get(i).getName());
+            }
+        }
     }
 }
