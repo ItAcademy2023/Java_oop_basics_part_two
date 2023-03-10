@@ -1,6 +1,6 @@
 package com.itacademy.eshop.services;
 
-import com.itacademy.eshop.product.Product;
+import com.itacademy.eshop.product.*;
 import com.itacademy.eshop.product.types.Category;
 import com.itacademy.eshop.shop.Eshop;
 
@@ -25,7 +25,23 @@ public class ShopService {
          * Each class must extend AbstractProduct class.
          * So you will have to create at least 6 classes that extend Product class.
          */
-        throw new UnsupportedOperationException("createProducts() method is not implemented yet.");
-    }
+        //create new array list
+        //Product product = new Product();// these are both objects
+        //contructor creates objects
+        //ArrayList electronics = new ArrayList<>();
+        //child and parent class fields
+        ArrayList<Product> productsNew = new ArrayList<>();
 
+        //took created array list and added new computer object
+        productsNew.add(new Computer("Laptop", 100, Category.ELECTRONICS, "123", "Dell", "intel", 12));
+
+        productsNew.add(new Clothing("Shirt", 100, Category.CLOTHING, "leather", "winter"));
+        productsNew.add(new Smartphone("Iphone", 100, Category.ELECTRONICS, "111", "Iphone", "M", "8"));
+
+        return productsNew;
+
+        //        throw new UnsupportedOperationException("createProducts() method is not implemented yet.");
+    }
+    //overload changes the parameters of the  and override from the parent class
+    //contructor creates an object from class
 }

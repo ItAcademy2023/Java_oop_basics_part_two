@@ -1,11 +1,16 @@
 package com.itacademy.eshop;
 
+import com.itacademy.eshop.exceptions.DuplicateProductException;
 import com.itacademy.eshop.exceptions.ProductNotFoundException;
+import com.itacademy.eshop.product.Toys;
+import com.itacademy.eshop.product.Unicorn;
+import com.itacademy.eshop.product.types.Category;
 import com.itacademy.eshop.services.ShopService;
 import com.itacademy.eshop.shop.Eshop;
 import com.itacademy.eshop.shop.ShoppingCart;
 import com.itacademy.eshop.simulations.CustomerSimulation;
 import com.itacademy.eshop.simulations.ManagerSimulation;
+import org.w3c.dom.ls.LSOutput;
 
 public class Runner {
 
@@ -33,7 +38,12 @@ public class Runner {
          * */
 
         ManagerSimulation managerSimulation = new ManagerSimulation(shop);
-        managerSimulation.simulate();
+        try {
+            managerSimulation.simulate();
+        } catch (DuplicateProductException Exception) {
+
+            System.out.println("Something went wrong: " + Exception);
+        }
         /**
          * After the simulation, the shop should contain at least on product per category except FOOD.
          * Should contain products with the following names: "Shirt", "Book".
@@ -51,7 +61,17 @@ public class Runner {
          * Should have total price combined by all products in the cart
          */
         shoppingCart.printShoppingCart();
+        Unicorn unicorn = new Unicorn("Unicorn", 10, Category.TOYS, 10, "textile", "talkable");
+        printUnicorn(unicorn);
+        System.out.println("Laptop average rating : " + shoppingCart.getProductByName("Laptop").getAverageRating());
+    }
 
 
+
+
+    private void printUnicorn(Unicorn unicorn) {
+
+        System.out.println(unicorn);
     }
 }
+
