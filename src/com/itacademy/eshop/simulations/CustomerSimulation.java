@@ -34,8 +34,8 @@ public class CustomerSimulation {
 
         shoppingCart.addProduct(shop.findProductByName("Shirt"));
         shoppingCart.addProduct(shop.findProductByName("Book"));
-        shoppingCart.addProduct(shop.findProductByName("product one"));
-        shoppingCart.addProduct(shop.findProductByName("product two"));
+        shoppingCart.addProduct(shop.findProductByName("Chips"));
+        shoppingCart.addProduct(shop.findProductByName("ToyCar"));
     }
 
     private void removeProductsFromShoppingCart() {
