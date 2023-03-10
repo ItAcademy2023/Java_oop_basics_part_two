@@ -11,7 +11,7 @@ import com.itacademy.eshop.simulations.ManagerSimulation;
 
 public class Runner {
 
-    public void run() throws ProductNotFoundException, DuplicateProductException {
+    public void run() {
         ShopService shopService = new ShopService();
         Eshop shop = shopService.createShop();
 
@@ -50,8 +50,13 @@ public class Runner {
          */
         shop.printProducts();
 
+        ShoppingCart shoppingCart = new ShoppingCart();
         CustomerSimulation customerSimulation = new CustomerSimulation(shop);
-        ShoppingCart shoppingCart = customerSimulation.simulateCustomerShopping();
+        try {
+            shoppingCart = customerSimulation.simulateCustomerShopping();
+        } catch (ProductNotFoundException e) {
+            System.out.println("Product not found " + e.getMessage());
+        }
         /**
          * After the simulation, the shopping cart should contain 3 products. One of them should be a book.
          * Should have total price combined by all products in the cart

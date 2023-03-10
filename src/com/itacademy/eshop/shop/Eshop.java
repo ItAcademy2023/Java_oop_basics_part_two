@@ -37,11 +37,12 @@ public class Eshop {
 
     public void addProduct(Product shirt) throws DuplicateProductException {
 
-        if (products.contains(shirt)) {
-            throw new DuplicateProductException("This product already exists.");
-        } else {
-            products.add(shirt);
+        for (Product product: products) {
+            if (product.getName().equals(shirt.getName())) {
+                throw new DuplicateProductException("This product already exists.");
+            }
         }
+        products.add(shirt);
     }
 
 

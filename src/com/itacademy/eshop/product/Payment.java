@@ -28,5 +28,5 @@ public abstract class Payment {
         this.amount = amount;
     }
 
-    public abstract void processPayment(ShoppingCart shoppingCart);
+    public abstract void processPayment(Integer totalPrice);
 }

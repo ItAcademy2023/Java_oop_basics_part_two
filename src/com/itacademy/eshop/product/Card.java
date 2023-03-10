@@ -50,8 +50,8 @@ public abstract class Card extends Payment {
     }
 
     @Override
-    public void processPayment(ShoppingCart shoppingCart) {
-        if (getAmount() - shoppingCart.getTotalPrice() > 0) {
+    public void processPayment(Integer totalPrice) {
+        if (getAmount() - totalPrice > 0) {
             //Implement card validation
             System.out.println("Payment was successful");
         } else {

@@ -30,9 +30,9 @@ public abstract class Cash extends Payment {
     }
 
     @Override
-    public void processPayment(ShoppingCart shoppingCart) {
-        if (getAmount() - shoppingCart.getTotalPrice() > 0) {
-            setChange(getAmount() - shoppingCart.getTotalPrice());
+    public void processPayment(Integer totalPrice) {
+        if (getAmount() - totalPrice > 0) {
+            setChange(getAmount() - totalPrice);
             System.out.println("Payment was successful. Change is: " + getChange());
         } else {
             System.out.println("Insufficient funds.");
