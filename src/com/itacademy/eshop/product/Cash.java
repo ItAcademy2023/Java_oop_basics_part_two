@@ -10,6 +10,6 @@ public class Cash extends Payment {
 
     @Override
     public double processPayment(double d1, double d2, double d3) {
-        return d1 +d2 +d3 ;
+        return d1 + d2 + d3 ;
     }
 }

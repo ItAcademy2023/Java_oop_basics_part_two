@@ -11,14 +11,14 @@ public abstract class Food extends Product {
         this.countryOrigin = countryOrigin;
     }
 
-    public String getCountryOrigin(){
+    public String getCountryOrigin() {
         return countryOrigin;
     }
 
     @Override
     public void displayProductInfo() {
         System.out.println(
-                "Category"+getCategory()
+                "Category" + getCategory()
         );
     }
 }
