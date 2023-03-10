@@ -24,8 +24,8 @@ public abstract class Product {
     public double getPrice() {
         return price;
     }
-
-    public Category getCategory() {        return category;
+    public Category getCategory() {
+        return category;
     }
 
     public ArrayList<Review> getReviews() {
@@ -49,13 +49,13 @@ public abstract class Product {
     public void addReview(Review review) {
         reviews.add(review);
     }
-
-
     public void setPrice(int price) {
         this.price = price;
     }
-
+    public void setName(String newName) {
+        name = newName;
+    }
     public abstract void displayProductInfo();
 
-
+    public abstract void changeProductName(String newName);
 }
