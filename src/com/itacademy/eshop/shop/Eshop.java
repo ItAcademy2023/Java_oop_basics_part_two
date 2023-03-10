@@ -27,16 +27,19 @@ public class Eshop {
     }
 
     public void addProduct(Product product) throws DuplicateProductException {
-        for(Product p : products){
-            if(p.equals(product)){
-              throw new DuplicateProductException("Product already exists");
-            }else{
-                products.add(product);
+        boolean isProductExists = false;
+        for (Product p : products) {
+            if (p.equals(product)) {
+                isProductExists = true;
+                break;
             }
 
+            if (isProductExists) {
+                throw new DuplicateProductException("Product already exists");
+            } else {
+                products.add(product);
+            }
         }
-
-
     }
 
 

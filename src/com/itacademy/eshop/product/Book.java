@@ -35,7 +35,7 @@ public class Book extends Product implements AgeRestricted {
 
     @Override
     public void setMinimumAge() {
-        switch (getGenre())    {
+        switch (getGenre()) {
             case FAIRYTALE:
                 this.minimumAge = 0;
                 break;

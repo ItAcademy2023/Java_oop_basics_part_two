@@ -14,5 +14,6 @@ public abstract class Payment {
     public String getPaymentID() {
         return paymentID;
     }
+
     abstract void processPayment();
 }

@@ -1,8 +1,9 @@
 package com.itacademy.eshop.services;
 
-import com.itacademy.eshop.product.Computer;
-import com.itacademy.eshop.product.Product;
+import com.itacademy.eshop.product.*;
 import com.itacademy.eshop.product.types.Category;
+import com.itacademy.eshop.product.types.Genre;
+import com.itacademy.eshop.product.types.ToyType;
 import com.itacademy.eshop.shop.Eshop;
 
 import java.util.ArrayList;
@@ -26,8 +27,22 @@ public class ShopService {
          * Each class must extend AbstractProduct class.
          * So you will have to create at least 6 classes that extend Product class.
          */
+        ArrayList<Product> productsArrList = new ArrayList<>();
+
         Computer computer = new Computer("Computer name", 1000.2, Category.ELECTRONICS, "unknown", "VIP", "known", 8);
-        throw new UnsupportedOperationException("createProducts() method is not implemented yet.");
+        productsArrList.add(computer);
+        Book book = new Book("Fairytale name", 10.2, Category.BOOKS, Genre.FAIRYTALE);
+        productsArrList.add(book);
+        Smartphone smartphone = new Smartphone("Laptop", 499.9, Category.ELECTRONICS, "unknown", "VI brand", 6.5);
+        productsArrList.add(smartphone);
+        Food banana = new Food("Banana", 0.59, Category.FOOD, "100% banana");
+        productsArrList.add(banana);
+        Clothing shirt = new Clothing("Shirt", 15, Category.CLOTHING, 36);
+        productsArrList.add(shirt);
+        Toy puzzle = new Toy("Puzzle name", 7, Category.TOYS, ToyType.PUZZLES);
+        productsArrList.add(puzzle);
+
+        return productsArrList;
     }
 
 }

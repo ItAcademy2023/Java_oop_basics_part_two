@@ -20,7 +20,9 @@ public class Smartphone extends Electronics {
         super.setPrice(super.getPrice() * 0.9);
     }
 
-    /** Overloading: setDiscountedPrice with specified discount percent */
+    /**
+     * Overloading: setDiscountedPrice with specified discount percent
+     */
     public void setDiscountedPrice(int discountPercent) {
 
         super.setPrice(super.getPrice() * (double) discountPercent / 100);
