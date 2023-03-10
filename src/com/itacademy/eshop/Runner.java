@@ -1,5 +1,6 @@
 package com.itacademy.eshop;
 
+import com.itacademy.eshop.exceptions.DuplicateProductException;
 import com.itacademy.eshop.exceptions.ProductNotFoundException;
 import com.itacademy.eshop.services.ShopService;
 import com.itacademy.eshop.shop.Eshop;
@@ -9,10 +10,9 @@ import com.itacademy.eshop.simulations.ManagerSimulation;
 
 public class Runner {
 
-    public void run() throws ProductNotFoundException {
+    public void run() throws DuplicateProductException, ProductNotFoundException {
         ShopService shopService = new ShopService();
         Eshop shop = shopService.createShop();
-
         /**
          * Inheritance:
          *      1. Create at one or more class per each category that extends the Product class.
@@ -31,7 +31,6 @@ public class Runner {
          *      1. Modify the addProduct() method in the Eshop class to throw a DuplicateProductException if the product being added already exists in the product list.
          *      2. Catch that exception in the Runner class and print a message to the console.
          * */
-
         ManagerSimulation managerSimulation = new ManagerSimulation(shop);
         managerSimulation.simulate();
         /**
