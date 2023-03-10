@@ -25,7 +25,8 @@ public abstract class Product {
         return price;
     }
 
-    public Category getCategory() {        return category;
+    public Category getCategory() {
+        return category;
     }
 
     public ArrayList<Review> getReviews() {
@@ -46,6 +47,15 @@ public abstract class Product {
         return sum / reviews.size();
     }
 
+    public int setOtherRating(int newRating){
+        if(getAverageRating() <= 2) {
+            for (Review review : reviews) {
+                newRating = review.getRating();
+            }
+        }
+        return newRating;
+    }
+
     public void addReview(Review review) {
         reviews.add(review);
     }
@@ -57,5 +67,6 @@ public abstract class Product {
 
     public abstract void displayProductInfo();
 
+public abstract void displayProductReview();
 
 }
