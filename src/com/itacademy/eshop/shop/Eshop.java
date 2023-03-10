@@ -1,5 +1,6 @@
 package com.itacademy.eshop.shop;
 
+import com.itacademy.eshop.exceptions.DuplicateProductException;
 import com.itacademy.eshop.exceptions.ProductNotFoundException;
 import com.itacademy.eshop.product.Product;
 import com.itacademy.eshop.product.types.Category;
@@ -25,8 +26,14 @@ public class Eshop {
         }
     }
 
-    public void addProduct(Product shirt) {
+    public void addProduct(Product shirt) throws DuplicateProductException {
+        for(Product product : products) {
+            if (shirt.getName() == product.getName()) {
+                throw new DuplicateProductException();
+            }
+        }
         products.add(shirt);
+
     }
 
 
