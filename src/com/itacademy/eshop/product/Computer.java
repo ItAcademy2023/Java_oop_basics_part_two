@@ -66,9 +66,9 @@ public class Computer extends Electronics implements Discountable {
  *   print all the fiellds
  * main abstract which is on the product class*/
         System.out.println(
-                " Category " + getCategory() +
-                        " Voltage " + getVoltage() +
-                        " Price of Electronics" + getPrice());
+                "\nCategory " + getCategory() +
+                        "\nVoltage " + getVoltage() +
+                        "\nPrice of Electronics" + getPrice());
 
     }
 

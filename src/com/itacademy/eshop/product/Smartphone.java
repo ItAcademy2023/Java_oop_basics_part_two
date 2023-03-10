@@ -50,10 +50,7 @@ public class Smartphone extends Electronics implements Discountable {
 
     }
 
-    @Override
-    public void setWearable() {
 
-    }
 
     @Override
     public double calculateDiscountedPrice() {

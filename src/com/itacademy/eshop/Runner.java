@@ -2,11 +2,15 @@ package com.itacademy.eshop;
 
 import com.itacademy.eshop.exceptions.DuplicateProductException;
 import com.itacademy.eshop.exceptions.ProductNotFoundException;
+import com.itacademy.eshop.product.Toys;
+import com.itacademy.eshop.product.Unicorn;
+import com.itacademy.eshop.product.types.Category;
 import com.itacademy.eshop.services.ShopService;
 import com.itacademy.eshop.shop.Eshop;
 import com.itacademy.eshop.shop.ShoppingCart;
 import com.itacademy.eshop.simulations.CustomerSimulation;
 import com.itacademy.eshop.simulations.ManagerSimulation;
+import org.w3c.dom.ls.LSOutput;
 
 public class Runner {
 
@@ -57,5 +61,23 @@ public class Runner {
          * Should have total price combined by all products in the cart
          */
         shoppingCart.printShoppingCart();
+        Unicorn unicorn = new Unicorn("Unicorn", 10, Category.TOYS, 10, "textile","talkable") {
+            @Override
+            public void printOutTotalPrice() {
+            }
+
+            @Override
+            public void displayProductInfo() {
+                super.displayProductInfo();
+                System.out.println(Unicorn);
+            }
+
+            @Override
+            public void setDiscountedPrice() {
+
+            }
+        };
+
+
     }
 }

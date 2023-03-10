@@ -63,4 +63,9 @@ public class Shirt extends Clothing implements Wearable {
     @Override
     public void setDiscountedPrice() {
     }
+
+    @Override
+    public void setWearable() {
+
+    }
 }
