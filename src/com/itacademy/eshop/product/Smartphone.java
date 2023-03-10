@@ -48,7 +48,11 @@ public class Smartphone extends Electronics implements Discountable {
                         "\nVoltage" + getVoltage() +
                         "\nPrice" + getPrice());
 
-        throw new UnsupportedOperationException("displayProductInfo() method is not implemented yet.");
+    }
+
+    @Override
+    public void setWearable() {
+
     }
 
     @Override
