@@ -25,9 +25,9 @@ public class Clothing extends Product {
     @Override
     public void displayProductInfo() {
         System.out.println(
-                " Material " + getMaterial() +
-                        " Season " + getSeason() +
-                        " Price " + getPrice()) ;
+                "Material " + getMaterial() +
+                        "\nSeason " + getSeason() +
+                        "\nPrice " + getPrice()) ;
            }
 
     @Override

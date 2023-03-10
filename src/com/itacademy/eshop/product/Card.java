@@ -15,9 +15,9 @@ public class Card extends Payment {
 
     @Override
     void processPayment() {
-        System.out.println("Processing card payment... " +
+        System.out.println("Card Payment " +
                 "\nPayment ID: " + getPaymentID()+
-                "\nCard Holder: " + getCardHolderName()+
+                "\nCardHolder name: " + getCardHolderName()+
                 "\nCard number: " + getCardNumber()
         );
     }

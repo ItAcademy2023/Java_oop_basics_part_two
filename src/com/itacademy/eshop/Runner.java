@@ -61,23 +61,17 @@ public class Runner {
          * Should have total price combined by all products in the cart
          */
         shoppingCart.printShoppingCart();
-        Unicorn unicorn = new Unicorn("Unicorn", 10, Category.TOYS, 10, "textile","talkable") {
-            @Override
-            public void printOutTotalPrice() {
-            }
-
-            @Override
-            public void displayProductInfo() {
-                super.displayProductInfo();
-                System.out.println(Unicorn);
-            }
-
-            @Override
-            public void setDiscountedPrice() {
-
-            }
-        };
+        Unicorn unicorn = new Unicorn("Unicorn", 10, Category.TOYS, 10, "textile", "talkable");
+        printUnicorn(unicorn);
+        System.out.println("Laptop average rating : " + shoppingCart.getProductByName("Laptop").getAverageRating());
+    }
 
 
+
+
+    private void printUnicorn(Unicorn unicorn) {
+
+        System.out.println(unicorn);
     }
 }
+

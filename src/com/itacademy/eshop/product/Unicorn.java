@@ -18,4 +18,11 @@ public class Unicorn extends Toys {
     @Override
     public void setDiscountedPrice() {
     }
+
+
+    @Override
+    public String toString(){
+        return String.format("sdfghlkjbvrjyhs %s", getName());
+    //return getName() + "\n" + getCategory();
+    }
 }
