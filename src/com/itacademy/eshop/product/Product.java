@@ -57,5 +57,5 @@ public abstract class Product {
 
     public abstract void displayProductInfo();
 
-
+    public abstract void displayProductCategory();
 }

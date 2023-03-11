@@ -1,5 +1,6 @@
 package com.itacademy.eshop.shop;
 
+import com.itacademy.eshop.exceptions.DuplicateProductException;
 import com.itacademy.eshop.exceptions.ProductNotFoundException;
 import com.itacademy.eshop.product.Product;
 import com.itacademy.eshop.product.types.Category;
@@ -21,12 +22,19 @@ public class Eshop {
          * Make Product class abstract and implement displayProductInfo() method in each child class.
          */
         for (Product product : products) {
-//            product.displayProductInfo();
+            product.displayProductInfo();
+            System.out.println("===================");
         }
     }
 
-    public void addProduct(Product shirt) {
-        products.add(shirt);
+    public void addProduct(String name) throws DuplicateProductException {
+        for (Product product : products) {
+            if (!product.getName().equals(name)) {
+                products.add(product);
+            }
+        }
+        throw new DuplicateProductException("Product with name " + name +
+                " already exists in the product list.");
     }
 
 
@@ -70,6 +78,5 @@ public class Eshop {
             }
         }
         throw new ProductNotFoundException("Product with name " + name + " not found.");
-
     }
 }
