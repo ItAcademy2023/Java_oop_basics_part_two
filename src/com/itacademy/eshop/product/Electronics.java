@@ -13,10 +13,6 @@ public abstract class Electronics extends Product {
         this.brand = brand;
     }
 
-    public String getVoltage() {
-        return voltage;
-    }
-
     public String getBrand() {
         return brand;
     }
