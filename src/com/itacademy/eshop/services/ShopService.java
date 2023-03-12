@@ -25,7 +25,7 @@ public class ShopService {
          * Each class must extend AbstractProduct class.
          * So you will have to create at least 6 classes that extend Product class.
          */
-        ArrayList<Product> arrayList = new ArrayList<>();
+        ArrayList<Product> products = new ArrayList<>();
 
         Computer computer = new Computer
                 ("MyDell", 150, Category.ELECTRONICS, "123", "brand", "intel", 16);
@@ -34,9 +34,15 @@ public class ShopService {
         Dress dress = new Dress
                 ("Mini", 25.5, Category.CLOTHING, "red", "velvet", "M", 90);
         Milk cow = new Milk
-                ("Karvute", 5.69, Category.FOOD, "2023-03-30", "Lithuania", "paper");
+                ("Cow-milk", 5.69, Category.FOOD, "2023-03-30", "Lithuania", "paper");
+        Shirt shirt = new Shirt
+                ("Shirt", 17.89, Category.CLOTHING, "white", "jeans", "S", "checkered");
+        Tales tale = new Tales
+                ("Cinderella", 14.6, Category.BOOKS, 55, "Anna Field", "princesses");
+        Cars car = new Cars
+                ("Rider", 35, Category.TOYS, "plastic", "jeep");
 
-        return arrayList;
+        return products;
 
     }
 }

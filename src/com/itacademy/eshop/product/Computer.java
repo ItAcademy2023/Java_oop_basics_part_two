@@ -54,7 +54,6 @@ public class Computer extends Electronics implements Discountable {
 
     @Override
     public double calculateDiscountedPrice() {
-        //some implementation
         return getPrice() * 0.9;
     }
 }

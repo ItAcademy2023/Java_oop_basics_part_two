@@ -12,7 +12,7 @@ import com.itacademy.eshop.simulations.ManagerSimulation;
 
 public class Runner {
 
-    public void run() throws ProductNotFoundException {
+    public void run() throws ProductNotFoundException, DuplicateProductException {
         ShopService shopService = new ShopService();
         Eshop shop = shopService.createShop();
 
@@ -57,10 +57,9 @@ public class Runner {
 
 
         try {
-            shop.addProduct("Mini");
+            shop.addProduct("Shirt");
         } catch (DuplicateProductException d) {
             System.out.println("Duplicate: " + d.getMessage());
         }
-
     }
 }
