@@ -49,7 +49,7 @@ public class Computer extends Electronics implements Discountable {
 
     @Override
     public void displayProductCategory() {
-
+        System.out.println("Computer is: " + getCategory());
     }
 
     @Override
