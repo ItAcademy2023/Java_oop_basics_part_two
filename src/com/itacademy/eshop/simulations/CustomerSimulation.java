@@ -2,6 +2,7 @@ package com.itacademy.eshop.simulations;
 
 import com.itacademy.eshop.exceptions.ProductNotFoundException;
 import com.itacademy.eshop.product.Review;
+import com.itacademy.eshop.product.types.Category;
 import com.itacademy.eshop.shop.Eshop;
 import com.itacademy.eshop.shop.ShoppingCart;
 
@@ -23,6 +24,7 @@ public class CustomerSimulation {
         addProductsToShoppingCart();
         removeProductsFromShoppingCart();
         leaveReviewsAndRatingsForProducts();
+
         return shoppingCart;
     }
 
@@ -34,8 +36,9 @@ public class CustomerSimulation {
 
         shoppingCart.addProduct(shop.findProductByName("Shirt"));
         shoppingCart.addProduct(shop.findProductByName("Book"));
-        shoppingCart.addProduct(shop.findProductByName("product one"));
-        shoppingCart.addProduct(shop.findProductByName("product two"));
+        shoppingCart.addProduct(shop.findProductByName("Samsung S20"));
+        shoppingCart.addProduct(shop.findProductByName("Java for dummies"));
+        shoppingCart.addProduct(shop.addProduct(Category.BOOKS));
     }
 
     private void removeProductsFromShoppingCart() {

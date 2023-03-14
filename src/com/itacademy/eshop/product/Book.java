@@ -2,7 +2,7 @@ package com.itacademy.eshop.product;
 
 import com.itacademy.eshop.product.types.Category;
 
-public abstract class Book extends Product{
+public class Book extends Product{
     private String author;
     private String genre;
 
@@ -33,6 +33,10 @@ public abstract class Book extends Product{
                         + "Genre:  " + getGenre()
                         + "Author:  " + getAuthor()
         );
+    }
+    @Override
+    public void changeProductName(String newName){
+        setName(newName);
     }
 }
 

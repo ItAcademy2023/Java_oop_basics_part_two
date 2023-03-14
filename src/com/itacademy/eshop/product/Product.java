@@ -58,4 +58,9 @@ public abstract class Product {
     public abstract void displayProductInfo();
 
     public abstract void changeProductName(String newName);
+
+    @Override
+    public String toString() {
+        return "{Product: " + getName() + ", Price: " + getPrice() + ", Category: " + getCategory() + ", " + getReviews() + "}";
+    }
 }

@@ -3,6 +3,7 @@ package com.itacademy.eshop.shop;
 import com.itacademy.eshop.exceptions.ProductNotFoundException;
 import com.itacademy.eshop.product.Product;
 import java.util.ArrayList;
+import java.util.HashSet;
 
 public class ShoppingCart {
     ArrayList<Product> products;
@@ -31,6 +32,10 @@ public class ShoppingCart {
 
     public void addProduct(Product product) {
         products.add(product);
+    }
+    public void addProduct(HashSet <Product>) {
+        products.removeAll();
+
     }
 
     public void removeProductByName(String shirt) {

@@ -21,10 +21,7 @@ public abstract class Food extends Product implements Discountable {
     public int getCalories(){
         return calories;
     }
-    @Override
-    public String getName(){
-        return getName() + " Book";
-    }
+
     public ArrayList<String> getIngredients(){
         return ingredients;
     }
@@ -51,11 +48,11 @@ public abstract class Food extends Product implements Discountable {
     public void displayProductInfo() {
         System.out.println(
                 "Name: " + getName()
-                        + "Price: " + getPrice()
-                        + "Category: " + getCategory()
-                        + "Calories: " + getCalories()
-                        + "Is Product Out Of Date: " + getIsOutOfDate()
-                        + "Ingredients" + getIngredients()
+                        + ", Price: " + getPrice()
+                        + ", Category: " + getCategory()
+                        + ", Calories: " + getCalories()
+                        + ", Is Product Out Of Date: " + getIsOutOfDate()
+                        + ", Ingredients" + getIngredients()
         );
     }
 }

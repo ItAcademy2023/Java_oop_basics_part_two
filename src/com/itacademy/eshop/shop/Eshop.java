@@ -6,6 +6,7 @@ import com.itacademy.eshop.product.Product;
 import com.itacademy.eshop.product.types.Category;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 
 public class Eshop {
     private String name;
@@ -29,10 +30,19 @@ public class Eshop {
     public void addProduct(Product product) throws DuplicateProductException {
         if(!products.contains(product)){
             products.add(product);
+        } else{
+            throw new DuplicateProductException("The " + product + "already exists");
         }
-        throw new DuplicateProductException("The " + product + "already exists");
     }
-
+    public HashSet<Product> addProduct(Category category){
+        for (Product product : products) {
+            if(product.getCategory() == category){
+                products.add(product);
+            }
+        }
+        HashSet<Product> hashedProducts = new HashSet<>(products);
+        return hashedProducts;
+    }
 
     /** This is an example of method overloading
      * We have created two methods with the same name "removeProduct", but with different parameters
@@ -70,6 +80,7 @@ public class Eshop {
     public Product findProductByName(String name) throws ProductNotFoundException {
         for (Product product : products) {
             if (product.getName().equals(name)) {
+                System.out.println(product);
                 return product;
             }
         }
